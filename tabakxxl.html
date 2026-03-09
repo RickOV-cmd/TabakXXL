@@ -1,0 +1,2392 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TabakXXL – Beste Tabakpreise | Nordhorn & Gronau</title>
+<meta name="description" content="TabakXXL & Tabak Discount – Zigaretten, Drehtabak & Stopftabak zu unschlagbaren deutschen Preisen. Nordhorn & Gronau. Vorbestellung per WhatsApp!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   VARIABLES
+============================================================ */
+:root{
+  /* Colors */
+  --bg:       #090806;
+  --bg-2:     #0F0C08;
+  --bg-3:     #161009;
+  --bg-4:     #1E160D;
+  --bg-5:     #261D12;
+  --gold:     #C8973D;
+  --gold-hi:  #E2B55C;
+  --gold-lo:  #7A5520;
+  --gold-a10: rgba(200,151,61,.10);
+  --gold-a20: rgba(200,151,61,.20);
+  --gold-a35: rgba(200,151,61,.35);
+  --t1:       #EDE0C8;
+  --t2:       #A8946E;
+  --t3:       #66502F;
+  --t4:       #3A2A18;
+  --bdr:      rgba(200,151,61,.12);
+  --bdr2:     rgba(200,151,61,.26);
+  --bdr3:     rgba(200,151,61,.48);
+  --green:    #2EAA68;
+  --red:      #C0392B;
+  --wa:       #25D366;
+  /* Typography */
+  --sans:     'Plus Jakarta Sans', sans-serif;
+  --serif:    'Playfair Display', serif;
+  /* Spacing */
+  --nav-h:    68px;
+  /* Radius */
+  --r-s:      8px;
+  --r:        12px;
+  --r-l:      20px;
+  --r-xl:     28px;
+  /* Shadows */
+  --sh-gold:  0 0 60px rgba(200,151,61,.14);
+  --sh-deep:  0 20px 60px rgba(0,0,0,.7);
+  /* Easing */
+  --ease:     cubic-bezier(.4,0,.2,1);
+  --spring:   cubic-bezier(.34,1.56,.64,1);
+}
+
+/* ============================================================
+   RESET
+============================================================ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{font-family:var(--sans);background:var(--bg);color:var(--t1);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit;color:inherit}
+ul{list-style:none}
+input,textarea,select{font-family:inherit}
+img{max-width:100%;display:block}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--gold-lo);border-radius:2px}
+
+/* Grain overlay */
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+  opacity:.45;mix-blend-mode:overlay}
+
+/* ============================================================
+   TYPOGRAPHY
+============================================================ */
+h1,h2,h3{font-family:var(--serif);line-height:1.12;font-weight:700}
+h4,h5{font-family:var(--sans);font-weight:700}
+.disp-xl{font-size:clamp(2.8rem,6vw,5.5rem);letter-spacing:-.02em}
+.disp-lg{font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.01em}
+.disp-md{font-size:clamp(1.5rem,2.5vw,2.2rem)}
+.eyebrow{font-family:var(--sans);font-size:.7rem;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before,.eyebrow::after{content:'';width:24px;height:1px;background:var(--gold)}
+.divider{width:48px;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  margin:14px auto}
+
+/* ============================================================
+   LAYOUT
+============================================================ */
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(18px,5vw,68px)}
+.sec{padding:clamp(72px,10vw,130px) 0}
+.sec-head{text-align:center;margin-bottom:clamp(44px,7vw,80px)}
+.sec-head .eyebrow{justify-content:center;margin-bottom:16px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+/* ============================================================
+   BUTTONS
+============================================================ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--sans);font-weight:600;font-size:.875rem;letter-spacing:.04em;
+  border-radius:50px;transition:all .28s var(--ease);cursor:pointer;
+  white-space:nowrap;position:relative;overflow:hidden}
+.btn::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,0);
+  transition:background .2s}
+.btn:hover::after{background:rgba(255,255,255,.06)}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:linear-gradient(135deg,var(--gold-hi),var(--gold));
+  color:var(--bg);padding:14px 30px;box-shadow:0 6px 28px rgba(200,151,61,.28)}
+.btn-gold:hover{box-shadow:0 10px 36px rgba(200,151,61,.42);transform:translateY(-2px)}
+.btn-out{border:1.5px solid var(--bdr2);color:var(--t1);padding:13px 28px}
+.btn-out:hover{border-color:var(--gold);color:var(--gold)}
+.btn-sm{padding:9px 20px;font-size:.8rem}
+.btn-wa{background:linear-gradient(135deg,#2ECC71,#25D366);
+  color:#fff;padding:14px 28px;box-shadow:0 6px 28px rgba(37,211,102,.25)}
+.btn-wa:hover{box-shadow:0 10px 36px rgba(37,211,102,.4);transform:translateY(-2px)}
+.btn-wa svg,.btn-gold svg,.btn-out svg{flex-shrink:0}
+
+/* ============================================================
+   FIXED UI — LANGUAGE + ADMIN (TOP-RIGHT CLUSTER)
+============================================================ */
+#ui-cluster{
+  position:fixed;top:16px;right:16px;z-index:9970;
+  display:flex;align-items:center;gap:8px;
+}
+#lang-sw{display:flex;background:rgba(15,12,8,.92);border:1px solid var(--bdr);
+  border-radius:30px;padding:3px;backdrop-filter:blur(20px)}
+.lb{padding:5px 13px;border-radius:24px;font-size:.71rem;font-weight:700;
+  letter-spacing:.08em;color:var(--t3);transition:.25s;cursor:pointer}
+.lb.on{background:var(--gold);color:var(--bg)}
+.lb:hover:not(.on){color:var(--gold)}
+#admin-btn{width:38px;height:38px;border-radius:50%;
+  background:rgba(15,12,8,.92);border:1px solid var(--bdr);
+  display:flex;align-items:center;justify-content:center;
+  backdrop-filter:blur(20px);transition:.25s;font-size:.9rem;flex-shrink:0}
+#admin-btn:hover{border-color:var(--gold);background:rgba(200,151,61,.1)}
+
+/* ============================================================
+   FIXED UI — FAB BUTTONS (BOTTOM-RIGHT)
+============================================================ */
+#fab-group{
+  position:fixed;bottom:22px;right:20px;z-index:9960;
+  display:flex;flex-direction:column;align-items:flex-end;gap:10px;
+}
+#cart-fab{
+  width:52px;height:52px;border-radius:50%;position:relative;
+  background:linear-gradient(135deg,var(--gold-hi),var(--gold));
+  color:var(--bg);display:flex;align-items:center;justify-content:center;
+  font-size:1.25rem;box-shadow:0 6px 28px rgba(200,151,61,.38);
+  transition:all .3s var(--spring)}
+#cart-fab:hover{transform:scale(1.1);box-shadow:0 10px 36px rgba(200,151,61,.52)}
+#cart-badge{position:absolute;top:-4px;right:-4px;width:20px;height:20px;
+  background:var(--red);color:#fff;border-radius:50%;font-size:.6rem;font-weight:800;
+  display:none;align-items:center;justify-content:center;border:2px solid var(--bg)}
+#cart-badge.show{display:flex}
+#chat-fab{
+  width:52px;height:52px;border-radius:50%;
+  background:var(--bg-4);border:1.5px solid var(--gold);
+  color:var(--gold);display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;box-shadow:0 6px 24px rgba(0,0,0,.5);
+  transition:all .3s var(--spring)}
+#chat-fab:hover{transform:scale(1.1);background:var(--gold);color:var(--bg)}
+
+/* ============================================================
+   LOCATION OVERLAY
+============================================================ */
+#loc-overlay{position:fixed;inset:0;z-index:99999;
+  background:var(--bg);display:flex;align-items:center;justify-content:center;padding:20px}
+.lo-inner{max-width:760px;width:100%;text-align:center}
+.lo-brand{font-family:var(--serif);font-size:.85rem;font-weight:700;
+  letter-spacing:.55em;color:var(--gold);text-transform:uppercase;
+  margin-bottom:56px;display:flex;align-items:center;justify-content:center;gap:16px}
+.lo-brand::before,.lo-brand::after{content:'';flex:1;max-width:80px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold))}
+.lo-h{margin-bottom:10px;color:#fff}
+.lo-sub{color:var(--t2);font-size:1rem;margin-bottom:48px}
+.lo-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:36px}
+.lo-card{background:var(--bg-3);border:1px solid var(--bdr);border-radius:var(--r-xl);
+  padding:36px 28px;cursor:pointer;transition:all .32s var(--ease);text-align:left;
+  position:relative;overflow:hidden}
+.lo-card::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 0,rgba(200,151,61,.09),transparent 70%);
+  opacity:0;transition:.32s}
+.lo-card:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:var(--sh-gold)}
+.lo-card:hover::before{opacity:1}
+.lo-city{font-family:var(--serif);font-size:2rem;font-weight:700;color:#fff;margin-bottom:5px}
+.lo-store{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px}
+.lo-addr{color:var(--t2);font-size:.85rem;line-height:1.7;margin-bottom:14px}
+.lo-hrs{font-size:.76rem;color:var(--t3);margin-bottom:22px}
+.lo-cta{display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,var(--gold-hi),var(--gold));
+  color:var(--bg);padding:10px 22px;border-radius:30px;
+  font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;
+  transition:.25s}
+.lo-card:hover .lo-cta{transform:scale(1.04)}
+.lo-note{font-size:.7rem;color:var(--t3)}
+
+/* ============================================================
+   NAVBAR
+============================================================ */
+#nav{position:fixed;inset:0 0 auto;z-index:9940;height:var(--nav-h);
+  display:flex;align-items:center;padding:0 clamp(18px,5vw,68px);
+  justify-content:space-between;transition:all .3s var(--ease)}
+#nav.solid{background:rgba(9,8,6,.96);backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--bdr);box-shadow:0 2px 20px rgba(0,0,0,.4)}
+.nav-logo{font-family:var(--serif);font-size:1.45rem;font-weight:800;
+  color:#fff;letter-spacing:-.01em}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:26px}
+.nav-links a{font-size:.83rem;font-weight:500;color:var(--t2);transition:.22s;
+  position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:100%;
+  height:1px;background:var(--gold);transition:right .25s var(--ease)}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{right:0}
+/* Location badge in nav */
+#nav-loc-btn{display:flex;align-items:center;gap:7px;
+  background:var(--gold-a10);border:1px solid var(--bdr2);
+  padding:7px 16px;border-radius:30px;font-size:.76rem;font-weight:600;
+  color:var(--gold);cursor:pointer;transition:.25s;flex-shrink:0}
+#nav-loc-btn:hover{background:var(--gold-a20);border-color:var(--bdr3)}
+.nav-pulse{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;
+  animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(46,170,104,.5)}50%{box-shadow:0 0 0 7px rgba(46,170,104,0)}}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:5px;cursor:pointer}
+.hamburger span{width:22px;height:1.5px;background:var(--gold);border-radius:2px;transition:.3s;display:block}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* ============================================================
+   MOBILE MENU
+============================================================ */
+#mob-menu{position:fixed;inset:0;z-index:9930;
+  background:var(--bg-2);padding:calc(var(--nav-h) + 20px) 28px 40px;
+  flex-direction:column;gap:4px;display:none;overflow-y:auto}
+#mob-menu.open{display:flex}
+#mob-menu a{font-size:1.3rem;font-family:var(--serif);padding:14px 0;
+  border-bottom:1px solid var(--bdr);color:var(--t1);transition:.2s}
+#mob-menu a:hover{color:var(--gold);padding-left:6px}
+.mob-loc-btn{margin-top:20px;display:flex;align-items:center;gap:10px;
+  background:var(--gold-a10);border:1px solid var(--bdr2);border-radius:var(--r);
+  padding:14px 20px;color:var(--gold);font-weight:600;cursor:pointer;transition:.2s}
+.mob-loc-btn:hover{background:var(--gold-a20)}
+
+/* ============================================================
+   HERO
+============================================================ */
+#hero{min-height:100vh;display:flex;align-items:center;
+  padding-top:var(--nav-h);position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 85% 75% at 62% 38%,rgba(200,151,61,.065) 0%,transparent 65%),
+    radial-gradient(ellipse 45% 55% at 8% 88%,rgba(200,151,61,.04) 0%,transparent 55%),
+    linear-gradient(165deg,#090806 0%,#0F0C08 40%,#0F0C08 65%,#090806 100%)}
+.hero-grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(200,151,61,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(200,151,61,.035) 1px,transparent 1px);
+  background-size:72px 72px}
+.hero-inner{position:relative;z-index:2;max-width:680px}
+.hero-tag{margin-bottom:24px}
+.hero-h1{color:#fff;margin-bottom:22px}
+.hero-h1 em{color:var(--gold);font-style:italic}
+.hero-p{font-size:clamp(.95rem,1.4vw,1.1rem);color:var(--t2);
+  max-width:520px;margin-bottom:40px;line-height:1.82;font-weight:400}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:60px}
+.hero-stats{display:flex;gap:clamp(24px,5vw,64px);flex-wrap:wrap}
+.hs-num{font-family:var(--serif);font-size:2.2rem;font-weight:800;
+  color:var(--gold-hi);line-height:1}
+.hs-lbl{font-size:.72rem;color:var(--t3);margin-top:4px;letter-spacing:.08em;font-weight:500}
+/* Hero badge */
+.hero-badge{position:absolute;right:clamp(20px,7vw,110px);top:50%;
+  transform:translateY(-50%);z-index:2;
+  background:var(--bg-4);border:1px solid var(--bdr2);border-radius:var(--r-xl);
+  padding:32px;max-width:230px;box-shadow:var(--sh-deep);
+  animation:hbFloat 6s ease-in-out infinite}
+@keyframes hbFloat{0%,100%{transform:translateY(-50%) translateY(0)}
+  50%{transform:translateY(-50%) translateY(-12px)}}
+.hb-tag{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.hb-num{font-family:var(--serif);font-size:2.8rem;font-weight:800;color:#fff;line-height:1}
+.hb-desc{font-size:.78rem;color:var(--t2);margin-top:8px;line-height:1.6}
+/* Scroll hint */
+.hero-scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:7px;z-index:2}
+.hero-scroll span{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--t3)}
+.scroll-line{width:1px;height:40px;background:linear-gradient(180deg,var(--gold),transparent);
+  animation:scrl 2s ease-in-out infinite}
+@keyframes scrl{0%,100%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1)}}
+
+/* ============================================================
+   MARQUEE
+============================================================ */
+.mq-wrap{border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);
+  background:var(--bg-2);overflow:hidden;padding:13px 0}
+.mq-track{display:flex;white-space:nowrap;animation:mq 38s linear infinite;width:max-content}
+.mq-track:hover{animation-play-state:paused}
+.mq-item{display:inline-flex;align-items:center;gap:12px;padding:0 32px;
+  font-size:.73rem;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);font-weight:500}
+.mq-gem{color:var(--gold);font-size:.48rem}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ============================================================
+   ABOUT
+============================================================ */
+#about{background:var(--bg-2)}
+.about-card{background:var(--bg-4);border:1px solid var(--bdr);
+  border-radius:var(--r-xl);padding:44px;position:relative;overflow:hidden}
+.about-card::after{content:'';position:absolute;top:-70px;right:-70px;
+  width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,151,61,.07),transparent 70%)}
+.about-xxl{font-family:var(--serif);font-size:6.5rem;font-weight:800;
+  color:rgba(200,151,61,.055);line-height:1;margin-bottom:-36px}
+.about-card h3{font-size:1.65rem;margin-bottom:10px;position:relative}
+.about-card p{color:var(--t2);line-height:1.85;position:relative;font-size:.93rem}
+.tv-cta{display:flex;align-items:center;gap:12px;
+  background:rgba(200,151,61,.07);border:1px solid var(--bdr);
+  border-radius:var(--r);padding:14px 18px;margin-top:22px;
+  cursor:pointer;transition:.28s;position:relative}
+.tv-cta:hover{border-color:var(--gold);background:rgba(200,151,61,.12)}
+.tv-play{width:38px;height:38px;border-radius:50%;background:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.8rem;color:var(--bg);flex-shrink:0;transition:.25s}
+.tv-cta:hover .tv-play{transform:scale(1.1)}
+.tv-info strong{display:block;font-size:.84rem;margin-bottom:3px;color:var(--t1)}
+.tv-info span{font-size:.76rem;color:var(--t3)}
+.about-stat{position:absolute;bottom:-18px;left:-18px;
+  background:linear-gradient(135deg,var(--gold-hi),var(--gold-lo));
+  border-radius:var(--r-l);padding:18px 22px}
+.as-n{font-family:var(--serif);font-size:2rem;font-weight:800;color:#fff;line-height:1}
+.as-l{font-size:.7rem;color:rgba(255,255,255,.65);margin-top:3px}
+.feat-list{display:flex;flex-direction:column;gap:16px;margin-bottom:36px}
+.feat{display:flex;align-items:flex-start;gap:14px}
+.feat-ico{width:40px;height:40px;flex-shrink:0;border-radius:var(--r);
+  background:var(--gold-a10);border:1px solid var(--bdr);
+  display:flex;align-items:center;justify-content:center;font-size:1rem}
+.feat-txt h4{font-size:.88rem;font-weight:700;margin-bottom:3px;color:var(--t1)}
+.feat-txt p{font-size:.78rem;color:var(--t3);line-height:1.55}
+
+/* ============================================================
+   PRODUCTS
+============================================================ */
+#products{background:var(--bg)}
+.cat-bar{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;
+  margin-bottom:clamp(36px,5vw,64px)}
+.cat-pill{padding:9px 22px;border-radius:30px;font-size:.79rem;font-weight:600;
+  letter-spacing:.05em;border:1px solid var(--bdr);color:var(--t2);
+  transition:.22s;background:transparent;cursor:pointer}
+.cat-pill.on,.cat-pill:hover{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.pc{background:var(--bg-3);border:1px solid var(--bdr);border-radius:var(--r-l);
+  overflow:hidden;transition:all .3s var(--ease);position:relative;cursor:pointer}
+.pc:hover{border-color:var(--bdr2);transform:translateY(-4px);box-shadow:var(--sh-gold)}
+.pc-img{height:148px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--bg-4),var(--bg-5));
+  font-size:3.2rem;position:relative}
+.pc-img::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.3))}
+.pc-badge{position:absolute;top:10px;right:10px;z-index:2;
+  background:var(--red);color:#fff;padding:3px 9px;
+  border-radius:20px;font-size:.62rem;font-weight:700;letter-spacing:.06em}
+.pc-body{padding:16px 18px}
+.pc-cat{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:5px;font-weight:600}
+.pc-name{font-family:var(--serif);font-size:1.15rem;margin-bottom:5px;color:#fff}
+.pc-desc{font-size:.76rem;color:var(--t3);line-height:1.5;margin-bottom:13px}
+.pc-row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.pc-price{display:flex;align-items:baseline;gap:7px}
+.pc-cur{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--gold)}
+.pc-old{font-size:.78rem;color:var(--t3);text-decoration:line-through}
+.pc-add{width:34px;height:34px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--gold-hi),var(--gold));
+  color:var(--bg);display:flex;align-items:center;justify-content:center;
+  font-size:1.15rem;font-weight:700;transition:all .25s var(--spring)}
+.pc-add:hover{transform:scale(1.18)}
+.pc-add:active{transform:scale(.94)}
+.pc-avail{font-size:.63rem;color:var(--t3);margin-top:9px;
+  display:flex;align-items:center;gap:5px}
+.avail-dot{width:5px;height:5px;border-radius:50%;background:var(--green)}
+
+/* ============================================================
+   PRICES
+============================================================ */
+#prices{background:var(--bg-2)}
+.p-compare{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;
+  align-items:center;max-width:820px;margin:0 auto 44px}
+.p-col{background:var(--bg-4);border:1px solid var(--bdr);
+  border-radius:var(--r-xl);padding:28px;text-align:center}
+.p-col.win{border-color:var(--gold);
+  background:linear-gradient(150deg,rgba(200,151,61,.06),var(--bg-4));
+  position:relative}
+.p-col.win::before{content:'BESTE PREIS';position:absolute;top:-12px;left:50%;
+  transform:translateX(-50%);background:var(--gold);color:var(--bg);
+  font-size:.6rem;font-weight:700;letter-spacing:.18em;padding:3px 12px;border-radius:20px}
+.p-flag{font-size:1.4rem;margin-bottom:7px}
+.p-country{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--t3);margin-bottom:9px;font-weight:600}
+.p-amt{font-family:var(--serif);font-size:2.4rem;font-weight:800}
+.p-amt.muted{color:var(--t3)}
+.p-amt.gold{color:var(--gold)}
+.p-note{font-size:.76rem;color:var(--t3);margin-top:4px}
+.p-vs{text-align:center;font-family:var(--serif);font-size:1.5rem;color:var(--t3)}
+.savings-cta{text-align:center;margin-bottom:56px}
+.savings-pill{display:inline-flex;align-items:center;gap:12px;
+  background:linear-gradient(135deg,var(--gold-hi),var(--gold));
+  color:var(--bg);padding:14px 40px;border-radius:50px;
+  font-size:1.05rem;font-weight:800;
+  box-shadow:0 6px 36px rgba(200,151,61,.32)}
+.p-tabs{display:flex;gap:7px;justify-content:center;margin-bottom:24px}
+.p-tab{padding:8px 22px;border-radius:30px;font-size:.79rem;font-weight:600;
+  border:1px solid var(--bdr);color:var(--t2);transition:.22s;background:transparent;cursor:pointer}
+.p-tab.on,.p-tab:hover{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+.ptbl-wrap{background:var(--bg-4);border:1px solid var(--bdr);
+  border-radius:var(--r-xl);overflow:hidden}
+.ptbl{width:100%;border-collapse:collapse}
+.ptbl th{text-align:left;padding:13px 20px;font-size:.67rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--t3);border-bottom:1px solid var(--bdr);font-weight:700}
+.ptbl td{padding:13px 20px;border-bottom:1px solid rgba(200,151,61,.05);
+  vertical-align:middle;font-size:.88rem}
+.ptbl tr:last-child td{border-bottom:none}
+.ptbl tr:hover td{background:rgba(200,151,61,.03)}
+.td-brand{font-weight:600;color:var(--t1)}
+.td-cnt{color:var(--t3)}
+.td-price{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--gold)}
+.td-promo{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--red)}
+.td-badge{font-size:.6rem;background:rgba(192,57,43,.14);color:var(--red);
+  padding:2px 7px;border-radius:20px;font-weight:700;margin-left:5px;vertical-align:middle}
+.td-old{font-size:.76rem;color:var(--t3);text-decoration:line-through;margin-left:5px}
+.tbl-add{width:30px;height:30px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold-hi),var(--gold));
+  color:var(--bg);display:flex;align-items:center;justify-content:center;
+  font-size:.95rem;font-weight:700;transition:all .25s var(--spring)}
+.tbl-add:hover{transform:scale(1.18)}
+.api-bar{display:flex;align-items:center;justify-content:center;gap:9px;
+  padding:12px;background:rgba(46,170,104,.07);
+  border-top:1px solid rgba(46,170,104,.15);font-size:.76rem;color:var(--t2)}
+.api-dot{width:7px;height:7px;border-radius:50%;background:var(--green);
+  animation:pulse 2s infinite;flex-shrink:0}
+
+/* ============================================================
+   ACTIONS
+============================================================ */
+#actions{background:var(--bg)}
+.act-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.ac{background:var(--bg-3);border:1px solid var(--bdr);
+  border-radius:var(--r-xl);overflow:hidden;transition:all .3s var(--ease)}
+.ac:hover{border-color:var(--bdr2);transform:translateY(-3px)}
+.ac.hot{border-color:var(--gold);
+  background:linear-gradient(145deg,rgba(200,151,61,.06),var(--bg-3))}
+.ac-head{padding:26px 26px 0}
+.ac-type{font-size:.63rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:7px;font-weight:700}
+.ac-title{font-size:1.45rem;margin-bottom:7px}
+.ac-desc{font-size:.83rem;color:var(--t2);line-height:1.7}
+.ac-body{padding:18px 26px 26px}
+.ac-price{display:inline-flex;align-items:center;gap:9px;
+  background:linear-gradient(135deg,rgba(200,151,61,.18),rgba(200,151,61,.1));
+  border:1px solid var(--bdr2);color:var(--gold-hi);
+  padding:8px 20px;border-radius:20px;font-weight:800;font-size:1.1rem;margin-bottom:12px;
+  font-family:var(--serif)}
+.ac-meta{font-size:.74rem;color:var(--t3);margin-bottom:9px;
+  display:flex;align-items:center;gap:5px}
+.ac-meta::before{content:'⏱';font-size:.8rem}
+.ac-loc{display:inline-flex;align-items:center;gap:5px;font-size:.7rem;
+  background:var(--gold-a10);border:1px solid var(--bdr);
+  color:var(--gold);padding:3px 11px;border-radius:20px;font-weight:600}
+.ac-add{margin-top:13px;width:100%;padding:10px;
+  background:linear-gradient(135deg,var(--gold-hi),var(--gold));
+  color:var(--bg);border-radius:var(--r);font-weight:700;font-size:.82rem;
+  transition:.25s;letter-spacing:.04em}
+.ac-add:hover{opacity:.9;transform:translateY(-1px)}
+.ac-add:active{transform:scale(.98)}
+
+/* ============================================================
+   LOCATIONS
+============================================================ */
+#locations{background:var(--bg-2)}
+.loc-g{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.sc{background:var(--bg-4);border:1px solid var(--bdr);
+  border-radius:var(--r-xl);overflow:hidden;transition:.3s}
+.sc:hover{border-color:var(--bdr2)}
+.sc.active-store{border-color:var(--gold)}
+.sc-map{height:190px;background:linear-gradient(135deg,var(--bg-4),var(--bg-5));
+  display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.sc-map-grid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(200,151,61,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(200,151,61,.045) 1px,transparent 1px);
+  background-size:24px 24px}
+.sc-pin{font-size:2.8rem;position:relative;z-index:1;
+  filter:drop-shadow(0 5px 20px rgba(200,151,61,.4))}
+.sc-body{padding:24px}
+.sc-tag{font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:6px;font-weight:700}
+.sc-name{font-size:1.55rem;margin-bottom:5px}
+.sc-addr{font-size:.84rem;color:var(--t2);margin-bottom:16px}
+.open-badge{display:inline-flex;align-items:center;gap:5px;
+  background:rgba(46,170,104,.12);border:1px solid rgba(46,170,104,.24);
+  color:var(--green);padding:4px 12px;border-radius:20px;font-size:.72rem;
+  font-weight:700;margin-bottom:12px}
+.closed-badge{display:inline-flex;align-items:center;gap:5px;
+  background:rgba(192,57,43,.1);border:1px solid rgba(192,57,43,.2);
+  color:var(--red);padding:4px 12px;border-radius:20px;font-size:.72rem;
+  font-weight:700;margin-bottom:12px}
+.hrs-tbl{width:100%;margin-bottom:16px;border-collapse:collapse}
+.hrs-tbl td{padding:4px 0;font-size:.81rem}
+.hrs-tbl td:last-child{text-align:right;font-weight:600}
+.hrs-tbl td:first-child{color:var(--t2)}
+.sc-btns{display:flex;gap:9px;flex-wrap:wrap}
+.btn-route{display:inline-flex;align-items:center;gap:6px;
+  background:var(--gold);color:var(--bg);padding:9px 20px;border-radius:30px;
+  font-size:.79rem;font-weight:700;transition:.25s}
+.btn-route:hover{background:var(--gold-hi)}
+.btn-tel{display:inline-flex;align-items:center;gap:6px;
+  border:1px solid var(--bdr2);color:var(--t1);padding:9px 20px;
+  border-radius:30px;font-size:.79rem;font-weight:600;transition:.25s}
+.btn-tel:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ============================================================
+   REVIEWS
+============================================================ */
+#reviews{background:var(--bg)}
+.rev-wrap{overflow:hidden;position:relative;margin:0 -10px}
+.rev-wrap::before,.rev-wrap::after{content:'';position:absolute;top:0;bottom:0;
+  width:100px;z-index:2;pointer-events:none}
+.rev-wrap::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
+.rev-wrap::after{right:0;background:linear-gradient(270deg,var(--bg),transparent)}
+.rev-track{display:flex;gap:18px;animation:revScroll 42s linear infinite;width:max-content;padding:10px}
+.rev-track:hover{animation-play-state:paused}
+@keyframes revScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.rv{background:var(--bg-3);border:1px solid var(--bdr);border-radius:var(--r-xl);
+  padding:26px;width:300px;flex-shrink:0;transition:.3s}
+.rv:hover{border-color:var(--bdr2)}
+.rv-stars{color:var(--gold);font-size:.88rem;letter-spacing:2px;margin-bottom:12px}
+.rv-text{color:var(--t2);font-size:.84rem;line-height:1.78;margin-bottom:18px;font-style:italic}
+.rv-author{display:flex;align-items:center;gap:10px}
+.rv-av{width:36px;height:36px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold-lo),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:.76rem;color:var(--bg);flex-shrink:0}
+.rv-name{font-weight:600;font-size:.84rem}
+.rv-from{font-size:.72rem;color:var(--t3)}
+
+/* ============================================================
+   CART DRAWER
+============================================================ */
+#cart-drawer{position:fixed;inset:0;z-index:99800;display:none}
+#cart-drawer.open{display:flex}
+.cart-bg{flex:1;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);cursor:pointer}
+.cart-panel{width:100%;max-width:440px;background:var(--bg-2);
+  border-left:1px solid var(--bdr);display:flex;flex-direction:column;
+  animation:slideIn .32s var(--ease);max-height:100vh}
+@keyframes slideIn{from{transform:translateX(100%)}to{transform:translateX(0)}}
+.cart-hdr{background:var(--bg-3);border-bottom:1px solid var(--bdr);
+  padding:18px 22px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.cart-hdr h3{font-family:var(--sans);font-size:.95rem;font-weight:700;
+  display:flex;align-items:center;gap:8px}
+.cart-x{width:32px;height:32px;border-radius:50%;border:1px solid var(--bdr);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--t2);transition:.22s;font-size:.85rem}
+.cart-x:hover{border-color:var(--gold);color:var(--gold)}
+.cart-loc{padding:9px 22px;background:var(--gold-a10);border-bottom:1px solid var(--bdr);
+  font-size:.76rem;color:var(--gold);display:flex;align-items:center;gap:8px;flex-shrink:0}
+.cart-items{flex:1;overflow-y:auto;padding:14px 22px;min-height:0}
+/* Empty state */
+.cart-empty{text-align:center;padding:50px 20px}
+.cart-empty .ce-icon{font-size:2.8rem;margin-bottom:12px}
+.cart-empty p{font-size:.86rem;color:var(--t3);margin-bottom:20px;line-height:1.7}
+.cart-empty a{display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,var(--gold-hi),var(--gold));
+  color:var(--bg);padding:12px 24px;border-radius:30px;
+  font-weight:700;font-size:.84rem;cursor:pointer;transition:.25s}
+.cart-empty a:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,151,61,.3)}
+/* Cart item */
+.ci{display:flex;align-items:center;gap:12px;padding:12px 0;
+  border-bottom:1px solid var(--bdr);animation:ciIn .22s var(--ease)}
+@keyframes ciIn{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:none}}
+.ci:last-child{border-bottom:none}
+.ci-em{width:42px;height:42px;background:var(--bg-5);border-radius:var(--r);
+  display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.ci-inf{flex:1;min-width:0}
+.ci-name{font-size:.86rem;font-weight:600;margin-bottom:2px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ci-price{font-size:.78rem;color:var(--gold)}
+.ci-ctrl{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.ci-q{width:28px;height:28px;border-radius:50%;border:1px solid var(--bdr);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.95rem;color:var(--t2);transition:.2s;font-weight:700}
+.ci-q:hover{border-color:var(--gold);color:var(--gold)}
+.ci-n{font-size:.85rem;font-weight:700;min-width:22px;text-align:center;color:var(--t1)}
+.ci-del{color:var(--t3);font-size:.85rem;padding:3px;margin-left:2px;
+  transition:.2s;border-radius:4px}
+.ci-del:hover{color:var(--red)}
+/* Cart footer */
+.cart-foot{border-top:1px solid var(--bdr);padding:18px 22px;flex-shrink:0;background:var(--bg-3)}
+.cart-total{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+.cart-total span{font-size:.84rem;color:var(--t2)}
+.cart-total strong{font-family:var(--serif);font-size:1.75rem;font-weight:800;color:var(--gold)}
+.cart-note{font-size:.7rem;color:var(--t3);text-align:center;margin-top:9px}
+/* Order form */
+#order-form{display:none;padding:14px 22px;flex:1;overflow-y:auto;min-height:0}
+#order-form.show{display:block}
+.of-title{font-family:var(--sans);font-size:.9rem;font-weight:700;
+  margin-bottom:14px;color:var(--t1)}
+.of-f{margin-bottom:12px}
+.of-f label{display:block;font-size:.7rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--t3);margin-bottom:5px}
+.of-f input{width:100%;padding:10px 13px;background:var(--gold-a10);
+  border:1px solid var(--bdr);border-radius:var(--r);
+  color:var(--t1);font-size:.86rem;transition:.22s}
+.of-f input:focus{outline:none;border-color:var(--gold);background:var(--gold-a20)}
+.of-f input::placeholder{color:var(--t3)}
+.btn-back{width:100%;padding:9px;border:1px solid var(--bdr);color:var(--t2);
+  border-radius:var(--r);font-size:.8rem;margin-bottom:10px;transition:.22s}
+.btn-back:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ============================================================
+   CHATBOT
+============================================================ */
+#chat-box{position:fixed;bottom:86px;right:20px;z-index:9950;
+  width:330px;max-width:calc(100vw - 40px);
+  background:var(--bg-3);border:1px solid var(--bdr);border-radius:var(--r-xl);
+  box-shadow:var(--sh-deep);display:none;flex-direction:column;overflow:hidden;
+  animation:chatIn .3s var(--spring)}
+#chat-box.open{display:flex}
+@keyframes chatIn{from{opacity:0;transform:translateY(16px) scale(.95)}to{opacity:1;transform:none}}
+.chat-hdr{background:linear-gradient(135deg,var(--gold-hi),var(--gold));
+  padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
+.chat-hdr-info{display:flex;align-items:center;gap:9px}
+.chat-av{width:34px;height:34px;border-radius:50%;background:rgba(0,0,0,.2);
+  display:flex;align-items:center;justify-content:center;font-size:1rem}
+.chat-hdr h4{font-family:var(--sans);font-size:.88rem;font-weight:700;color:var(--bg)}
+.chat-hdr p{font-size:.7rem;color:rgba(9,8,6,.6)}
+.chat-x{color:var(--bg);opacity:.7;font-size:.85rem;transition:.2s}
+.chat-x:hover{opacity:1}
+.chat-msgs{padding:14px;height:240px;overflow-y:auto;
+  display:flex;flex-direction:column;gap:9px}
+.chat-msgs::-webkit-scrollbar{width:3px}
+.msg{max-width:86%;padding:9px 13px;border-radius:var(--r-l);
+  font-size:.8rem;line-height:1.55;animation:msgIn .22s var(--ease)}
+@keyframes msgIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.msg.bot{background:var(--bg-5);color:var(--t1);align-self:flex-start;
+  border-bottom-left-radius:4px;white-space:pre-line}
+.msg.user{background:linear-gradient(135deg,var(--gold-hi),var(--gold));
+  color:var(--bg);font-weight:500;align-self:flex-end;border-bottom-right-radius:4px}
+.chat-qs{padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px;
+  border-top:1px solid var(--bdr)}
+.cq{padding:6px 13px;background:var(--gold-a10);border:1px solid var(--bdr);
+  border-radius:30px;font-size:.73rem;color:var(--t2);cursor:pointer;transition:.2s}
+.cq:hover{background:var(--gold-a20);border-color:var(--bdr2);color:var(--gold)}
+.chat-inp-row{padding:10px 14px;border-top:1px solid var(--bdr);
+  display:flex;gap:7px}
+.chat-inp{flex:1;background:var(--gold-a10);border:1px solid var(--bdr);
+  border-radius:var(--r);padding:8px 11px;color:var(--t1);font-size:.8rem;transition:.22s}
+.chat-inp:focus{outline:none;border-color:var(--gold)}
+.chat-inp::placeholder{color:var(--t3)}
+.chat-send{width:34px;height:34px;border-radius:50%;background:var(--gold);
+  color:var(--bg);display:flex;align-items:center;justify-content:center;
+  font-size:.88rem;flex-shrink:0;transition:.25s var(--spring)}
+.chat-send:hover{transform:scale(1.12)}
+#chat-cf{display:none;padding:10px 14px;border-top:1px solid var(--bdr)}
+#chat-cf.show{display:block}
+#chat-cf h5{font-size:.78rem;font-weight:700;color:var(--t2);margin-bottom:9px}
+.ccf-in{width:100%;padding:8px 11px;background:var(--gold-a10);
+  border:1px solid var(--bdr);border-radius:var(--r);
+  color:var(--t1);font-size:.78rem;margin-bottom:7px;transition:.22s}
+.ccf-in:focus{outline:none;border-color:var(--gold)}
+.ccf-in::placeholder{color:var(--t3)}
+.ccf-bk{font-size:.7rem;color:var(--t3);text-align:center;
+  cursor:pointer;margin-top:6px;transition:.2s}
+.ccf-bk:hover{color:var(--gold)}
+
+/* ============================================================
+   POPUP
+============================================================ */
+#popup-wrap{position:fixed;inset:0;z-index:99850;display:none;
+  align-items:center;justify-content:center;padding:20px;
+  background:rgba(0,0,0,.65);backdrop-filter:blur(10px)}
+#popup-wrap.open{display:flex}
+#popup-box{background:var(--bg-3);border:1px solid var(--bdr2);
+  border-radius:var(--r-xl);max-width:440px;width:100%;
+  position:relative;overflow:hidden;animation:popIn .38s var(--spring);
+  box-shadow:0 0 90px rgba(200,151,61,.16)}
+@keyframes popIn{from{opacity:0;transform:scale(.84)}to{opacity:1;transform:scale(1)}}
+.popup-glow{position:absolute;top:-70px;right:-70px;width:200px;height:200px;
+  border-radius:50%;background:radial-gradient(circle,rgba(200,151,61,.11),transparent 70%)}
+.popup-x{position:absolute;top:13px;right:13px;width:28px;height:28px;
+  border-radius:50%;border:1px solid var(--bdr);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--t3);transition:.2s;z-index:2;font-size:.78rem}
+.popup-x:hover{border-color:var(--gold);color:var(--gold)}
+.popup-body{padding:32px;position:relative;z-index:1}
+.popup-tag{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:9px;font-weight:700}
+.popup-body h3{font-size:1.8rem;margin-bottom:9px;color:#fff}
+.popup-body p{color:var(--t2);font-size:.86rem;line-height:1.75;margin-bottom:18px}
+.popup-hrs{background:var(--gold-a10);border:1px solid var(--bdr);
+  border-radius:var(--r);padding:14px;margin-bottom:18px}
+.popup-hrs h4{font-size:.72rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.12em;color:var(--gold);margin-bottom:9px}
+.ph-row{display:flex;justify-content:space-between;font-size:.8rem;
+  padding:4px 0;border-bottom:1px solid rgba(200,151,61,.08)}
+.ph-row:last-child{border-bottom:none}
+.ph-row span:first-child{color:var(--t2)}
+.ph-row span:last-child{font-weight:600}
+.popup-no{display:block;text-align:center;font-size:.7rem;color:var(--t3);
+  margin-top:9px;cursor:pointer;transition:.2s}
+.popup-no:hover{color:var(--gold)}
+
+/* ============================================================
+   ADMIN LOGIN
+============================================================ */
+#admin-login{position:fixed;inset:0;z-index:99900;
+  background:rgba(0,0,0,.8);backdrop-filter:blur(12px);
+  display:none;align-items:center;justify-content:center}
+#admin-login.open{display:flex}
+.al-box{background:var(--bg-3);border:1px solid var(--bdr2);
+  border-radius:var(--r-xl);padding:40px;max-width:360px;width:90%;
+  animation:popIn .35s var(--spring);box-shadow:var(--sh-deep)}
+.al-box h3{text-align:center;font-size:1.6rem;margin-bottom:6px}
+.al-box p{text-align:center;font-size:.84rem;color:var(--t2);margin-bottom:24px}
+.al-f{margin-bottom:14px}
+.al-f label{display:block;font-size:.7rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--t3);margin-bottom:6px}
+.al-f input{width:100%;padding:11px 14px;background:var(--gold-a10);
+  border:1px solid var(--bdr);border-radius:var(--r);
+  color:var(--t1);font-size:.9rem;transition:.22s}
+.al-f input:focus{outline:none;border-color:var(--gold)}
+#al-err{font-size:.78rem;color:var(--red);margin-bottom:10px;display:none}
+#al-err.show{display:block}
+
+/* ============================================================
+   ADMIN PANEL
+============================================================ */
+#admin-panel{position:fixed;inset:0;z-index:99890;display:none}
+#admin-panel.open{display:flex;align-items:stretch;justify-content:flex-end;
+  background:rgba(0,0,0,.78);backdrop-filter:blur(10px)}
+.adm-drawer{width:100%;max-width:900px;background:var(--bg-2);
+  border-left:1px solid var(--bdr);display:flex;flex-direction:column;
+  animation:slideIn .32s var(--ease);overflow:hidden}
+.adm-hdr{background:var(--bg-3);border-bottom:1px solid var(--bdr);
+  padding:16px 26px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.adm-hdr h2{font-family:var(--sans);font-size:.98rem;font-weight:700;
+  display:flex;align-items:center;gap:9px}
+.adm-hdr h2 span{color:var(--gold)}
+.adm-x{width:32px;height:32px;border-radius:50%;border:1px solid var(--bdr);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--t2);transition:.22s;font-size:.85rem}
+.adm-x:hover{border-color:var(--gold);color:var(--gold)}
+.adm-nav{display:flex;border-bottom:1px solid var(--bdr);
+  padding:0 26px;background:var(--bg-3);flex-shrink:0;overflow-x:auto}
+.an{padding:13px 17px;font-size:.79rem;font-weight:600;color:var(--t3);
+  border-bottom:2px solid transparent;transition:.22s;white-space:nowrap;cursor:pointer}
+.an.on{color:var(--gold);border-bottom-color:var(--gold)}
+.an:hover:not(.on){color:var(--t1)}
+.adm-body{flex:1;overflow-y:auto;padding:26px}
+.adm-sec{display:none}
+.adm-sec.on{display:block}
+.adm-g{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.adm-card{background:var(--bg-4);border:1px solid var(--bdr);border-radius:var(--r-l);padding:18px}
+.adm-card-title{font-family:var(--sans);font-size:.72rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.13em;color:var(--t3);margin-bottom:14px}
+.af{margin-bottom:12px}
+.af label{display:block;font-size:.7rem;font-weight:700;color:var(--t3);
+  letter-spacing:.08em;margin-bottom:5px;text-transform:uppercase}
+.af input,.af select,.af textarea{width:100%;padding:9px 12px;
+  background:rgba(200,151,61,.06);border:1px solid var(--bdr);
+  border-radius:var(--r-s);color:var(--t1);font-size:.82rem;transition:.22s}
+.af input:focus,.af select:focus,.af textarea:focus{outline:none;border-color:var(--gold)}
+.af select option{background:var(--bg-4)}
+.af textarea{height:66px;resize:vertical}
+.tog-row{display:flex;align-items:center;justify-content:space-between;
+  padding:9px 0;border-bottom:1px solid var(--bdr)}
+.tog-row:last-child{border-bottom:none}
+.tog-row span{font-size:.83rem;color:var(--t2)}
+.tog{position:relative;width:38px;height:20px;flex-shrink:0}
+.tog input{opacity:0;width:0;height:0}
+.tog-sl{position:absolute;inset:0;background:var(--bg);border:1px solid var(--bdr);
+  border-radius:20px;cursor:pointer;transition:.28s}
+.tog-sl::before{content:'';position:absolute;left:3px;top:2px;
+  width:14px;height:14px;border-radius:50%;background:var(--t3);transition:.28s}
+.tog input:checked+.tog-sl{background:var(--gold-a20);border-color:var(--gold)}
+.tog input:checked+.tog-sl::before{transform:translateX(18px);background:var(--gold)}
+.ab{padding:8px 18px;border-radius:var(--r);font-size:.79rem;
+  font-weight:700;letter-spacing:.05em;transition:.22s;cursor:pointer}
+.ab-gold{background:var(--gold);color:var(--bg)}
+.ab-gold:hover{background:var(--gold-hi)}
+.ab-out{border:1px solid var(--bdr);color:var(--t2)}
+.ab-out:hover{border-color:var(--gold);color:var(--gold)}
+.ab-danger{border:1px solid rgba(192,57,43,.3);color:var(--red)}
+.ab-danger:hover{background:rgba(192,57,43,.12)}
+.adm-status{display:flex;align-items:center;gap:8px;padding:11px 14px;
+  background:rgba(46,170,104,.07);border:1px solid rgba(46,170,104,.18);
+  border-radius:var(--r);font-size:.78rem;color:var(--t2);margin-bottom:18px}
+/* Price edit row */
+.apr{background:var(--bg-4);border:1px solid var(--bdr);border-radius:var(--r);
+  margin-bottom:6px;overflow:hidden;transition:.22s}
+.apr:hover{border-color:var(--bdr2)}
+.apr-top{display:flex;align-items:center;gap:10px;padding:11px 14px}
+.apr-em{font-size:1.2rem;flex-shrink:0}
+.apr-name{flex:1;font-size:.85rem;font-weight:600}
+.apr-price-display{font-family:var(--serif);color:var(--gold);font-size:1.05rem;font-weight:700}
+.apr-mode-tag{font-size:.62rem;background:var(--gold-a10);color:var(--gold);
+  padding:2px 7px;border-radius:20px;border:1px solid var(--bdr);flex-shrink:0}
+.apr-edit-btn{width:28px;height:28px;border-radius:50%;border:1px solid var(--bdr);
+  display:flex;align-items:center;justify-content:center;font-size:.78rem;
+  color:var(--t2);transition:.22s;flex-shrink:0}
+.apr-edit-btn:hover{border-color:var(--gold);color:var(--gold)}
+.apr-edit-form{display:none;padding:0 14px 14px;border-top:1px solid var(--bdr);
+  background:rgba(200,151,61,.03)}
+.apr-edit-form.show{display:block;animation:fadeDown .2s var(--ease)}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.aef-row{display:flex;gap:8px;align-items:flex-end;margin-top:12px;flex-wrap:wrap}
+.aef-f{flex:1;min-width:110px}
+.aef-f label{display:block;font-size:.68rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--t3);margin-bottom:4px}
+.aef-f input{width:100%;padding:8px 10px;background:var(--gold-a10);
+  border:1px solid var(--bdr);border-radius:var(--r-s);
+  color:var(--t1);font-size:.84rem;transition:.22s}
+.aef-f input:focus{outline:none;border-color:var(--gold)}
+.price-mode-row{display:flex;gap:7px;margin-top:10px}
+.pm-opt{flex:1;padding:7px 10px;border:1px solid var(--bdr);border-radius:var(--r-s);
+  text-align:center;font-size:.74rem;cursor:pointer;transition:.22s;color:var(--t2)}
+.pm-opt.sel{background:var(--gold-a10);border-color:var(--gold);color:var(--gold);font-weight:600}
+/* Action rows */
+.act-row{background:var(--bg-4);border:1px solid var(--bdr);border-radius:var(--r);
+  padding:12px 14px;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.act-row-name{flex:1;font-size:.84rem;font-weight:600}
+.act-row-meta{font-size:.7rem;color:var(--t3)}
+.act-row-status{font-size:.7rem;padding:2px 9px;border-radius:20px;font-weight:700;flex-shrink:0}
+.act-row-status.active{background:rgba(46,170,104,.12);color:var(--green);
+  border:1px solid rgba(46,170,104,.24)}
+.act-row-status.inactive{background:rgba(192,57,43,.1);color:var(--red);
+  border:1px solid rgba(192,57,43,.2)}
+
+/* ============================================================
+   TOAST
+============================================================ */
+#toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);
+  z-index:99999;background:var(--bg-4);border:1px solid var(--bdr2);
+  border-radius:var(--r);padding:12px 22px;
+  display:none;align-items:center;gap:10px;
+  box-shadow:var(--sh-gold);min-width:200px;max-width:88vw;
+  animation:toastIn .28s var(--spring)}
+#toast.show{display:flex}
+@keyframes toastIn{from{opacity:0;transform:translateX(-50%) translateY(10px)}
+  to{opacity:1;transform:translateX(-50%) translateY(0)}}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+footer{background:var(--bg);border-top:1px solid var(--bdr);padding:56px 0 26px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:clamp(24px,4vw,52px);margin-bottom:44px}
+.f-logo{font-family:var(--serif);font-size:1.6rem;font-weight:800;margin-bottom:12px}
+.f-logo span{color:var(--gold)}
+.f-brand p{font-size:.82rem;color:var(--t3);line-height:1.75;max-width:230px}
+.f-col h4{font-family:var(--sans);font-size:.67rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.f-col ul{display:flex;flex-direction:column;gap:9px}
+.f-col ul li a{font-size:.82rem;color:var(--t3);transition:.2s}
+.f-col ul li a:hover{color:var(--t1)}
+.f-bot{border-top:1px solid var(--bdr);padding-top:20px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.f-bot p{font-size:.74rem;color:var(--t3)}
+.age-pill{display:flex;align-items:center;gap:6px;
+  background:rgba(192,57,43,.08);border:1px solid rgba(192,57,43,.18);
+  padding:4px 12px;border-radius:20px;font-size:.7rem;color:var(--t3)}
+
+/* ============================================================
+   SCROLL REVEAL
+============================================================ */
+.rv-up{opacity:0;transform:translateY(26px);
+  transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.rv-left{opacity:0;transform:translateX(-26px);
+  transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.rv-right{opacity:0;transform:translateX(26px);
+  transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.rv-up.vis,.rv-left.vis,.rv-right.vis{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* ============================================================
+   LANGUAGE
+============================================================ */
+.de{}.nl{display:none!important}
+.nl-on .de{display:none!important}.nl-on .nl{display:block!important}
+.nl-on .nl-i{display:inline!important}.nl-on .de-i{display:none!important}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media(max-width:1080px){
+  .hero-badge{display:none}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){
+  .g2,.about-g2{grid-template-columns:1fr}
+  .loc-g{grid-template-columns:1fr}
+  .p-compare{grid-template-columns:1fr;max-width:360px}
+  .p-vs{display:none}
+  .adm-g{grid-template-columns:1fr}
+  .adm-drawer{max-width:100%}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  #nav-loc-btn{font-size:.7rem;padding:6px 12px}
+  .lo-cards{grid-template-columns:1fr}
+  #ui-cluster{top:14px;right:14px;gap:6px}
+  #fab-group{bottom:18px;right:16px}
+  #cart-fab,#chat-fab{width:48px;height:48px;font-size:1.15rem}
+}
+@media(max-width:520px){
+  .f-grid{grid-template-columns:1fr}
+  .hero-cta{flex-direction:column}
+  .hero-stats{gap:20px}
+  #chat-box{width:calc(100vw - 40px);right:20px}
+  .cart-panel{max-width:100%}
+  .adm-nav{gap:0}
+  .an{padding:11px 13px;font-size:.74rem}
+}
+@media(max-width:360px){
+  :root{--nav-h:60px}
+  .nav-logo{font-size:1.2rem}
+  #ui-cluster{top:12px;right:12px}
+  .lb{padding:4px 10px;font-size:.67rem}
+  #admin-btn{width:34px;height:34px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     FIXED UI CLUSTER (top-right)
+============================================================ -->
+<div id="ui-cluster">
+  <div id="lang-sw">
+    <button class="lb on" onclick="setLang('de')">DE</button>
+    <button class="lb" onclick="setLang('nl')">NL</button>
+  </div>
+  <button id="admin-btn" onclick="openAdmin()" title="Admin">⚙️</button>
+</div>
+
+<!-- ============================================================
+     FAB GROUP (bottom-right)
+============================================================ -->
+<div id="fab-group">
+  <button id="chat-fab" onclick="toggleChat()" title="Chat">💬</button>
+  <button id="cart-fab" onclick="openCart()" title="Warenkorb">
+    🛒
+    <span id="cart-badge">0</span>
+  </button>
+</div>
+
+<!-- ============================================================
+     LOCATION OVERLAY
+============================================================ -->
+<div id="loc-overlay">
+  <div class="lo-inner">
+    <div class="lo-brand">TabakXXL</div>
+    <h1 class="disp-lg lo-h">
+      <span class="de">Willkommen!</span>
+      <span class="nl">Welkom!</span>
+    </h1>
+    <p class="lo-sub">
+      <span class="de">Wählen Sie Ihren Standort für personalisierte Inhalte:</span>
+      <span class="nl">Kies uw vestiging voor gepersonaliseerde inhoud:</span>
+    </p>
+    <div class="lo-cards">
+      <div class="lo-card" onclick="selectLoc('nordhorn')">
+        <div class="lo-city">Nordhorn</div>
+        <div class="lo-store">Tabak Discount · K11 Tabak Zentrale</div>
+        <div class="lo-addr">Bentheimer Str. 118b<br>48529 Nordhorn, DE</div>
+        <div class="lo-hrs">
+          <span class="de">Mo–Do: 8–18 Uhr · Fr–Sa: 8–19 Uhr</span>
+          <span class="nl">Ma–Do: 8–18 uur · Vr–Za: 8–19 uur</span>
+        </div>
+        <span class="lo-cta">
+          <span class="de">Auswählen →</span>
+          <span class="nl">Kiezen →</span>
+        </span>
+      </div>
+      <div class="lo-card" onclick="selectLoc('gronau')">
+        <div class="lo-city">Gronau</div>
+        <div class="lo-store">TabakXXL Gronau</div>
+        <div class="lo-addr">Köningsstr. 66<br>48599 Gronau, DE</div>
+        <div class="lo-hrs">
+          <span class="de">Mo–Do: 9–19 Uhr · Fr–Sa: 8–19 Uhr</span>
+          <span class="nl">Ma–Do: 9–19 uur · Vr–Za: 8–19 uur</span>
+        </div>
+        <span class="lo-cta">
+          <span class="de">Auswählen →</span>
+          <span class="nl">Kiezen →</span>
+        </span>
+      </div>
+    </div>
+    <p class="lo-note">🔞 <span class="de">Nur für Personen ab 18 Jahren. Tabakwaren verantwortungsbewusst kaufen.</span><span class="nl">Alleen voor personen van 18+. Koop verantwoord.</span></p>
+  </div>
+</div>
+
+<!-- ============================================================
+     POPUP
+============================================================ -->
+<div id="popup-wrap">
+  <div id="popup-box">
+    <div class="popup-glow"></div>
+    <button class="popup-x" onclick="closePopup()">✕</button>
+    <div class="popup-body">
+      <div class="popup-tag" id="pp-tag">Aktuelle Aktion</div>
+      <h3 id="pp-title">🔥 Wochenangebot: Marlboro Red</h3>
+      <p id="pp-desc">Diese Woche Marlboro Red Stangen zum Aktionspreis von <strong style="color:var(--gold)">€ 32,00</strong> statt € 35,00. Nur solange Vorrat reicht!</p>
+      <div class="popup-hrs">
+        <h4 id="pp-hrs-title">Öffnungszeiten</h4>
+        <div class="ph-row" id="pp-h1"><span class="de">Mo – Do</span><span class="nl">Ma – Do</span><span>08:00 – 18:00 Uhr</span></div>
+        <div class="ph-row" id="pp-h2"><span class="de">Fr – Sa</span><span class="nl">Vr – Za</span><span>08:00 – 19:00 Uhr</span></div>
+        <div class="ph-row"><span class="de">Sonntag</span><span class="nl">Zondag</span><span style="color:var(--t3)" class="de">Geschlossen</span><span style="color:var(--t3)" class="nl">Gesloten</span></div>
+      </div>
+      <button class="btn btn-gold" style="width:100%;justify-content:center" onclick="closePopup()">
+        <span class="de">Zum Angebot →</span><span class="nl">Naar aanbieding →</span>
+      </button>
+      <span class="popup-no" onclick="noPopup()">
+        <span class="de">Nicht mehr anzeigen</span><span class="nl">Niet meer tonen</span>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     CART DRAWER
+============================================================ -->
+<div id="cart-drawer">
+  <div class="cart-bg" onclick="closeCart()"></div>
+  <div class="cart-panel">
+    <div class="cart-hdr">
+      <h3>🛒 <span class="de">Warenkorb</span><span class="nl">Winkelwagen</span></h3>
+      <button class="cart-x" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-loc" id="cart-loc">📍 <span id="cart-loc-name">–</span></div>
+    <div id="cart-items-wrap" style="flex:1;overflow-y:auto;padding:14px 22px;min-height:0">
+      <div id="cart-list"></div>
+    </div>
+    <!-- Order form -->
+    <div id="order-form">
+      <button class="btn-back" onclick="backToCart()">
+        ← <span class="de">Zurück zum Warenkorb</span><span class="nl">Terug naar winkelwagen</span>
+      </button>
+      <p class="of-title"><span class="de">Ihre Kontaktdaten:</span><span class="nl">Uw contactgegevens:</span></p>
+      <div class="of-f"><label><span class="de">Name *</span><span class="nl">Naam *</span></label>
+        <input type="text" id="o-name" placeholder="Ihr Name / Uw naam"></div>
+      <div class="of-f"><label><span class="de">Telefon *</span><span class="nl">Telefoon *</span></label>
+        <input type="tel" id="o-tel" placeholder="+31 / +49 ..."></div>
+      <div class="of-f"><label>E-Mail <span style="color:var(--t3)">(optional)</span></label>
+        <input type="email" id="o-email" placeholder="ihre@email.de"></div>
+      <button class="btn btn-wa" style="width:100%;justify-content:center;margin-top:4px" onclick="sendWA()">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="de">Per WhatsApp vorbestellen</span><span class="nl">Voorbestellen via WhatsApp</span>
+      </button>
+      <p class="cart-note de">Bezahlung bei Abholung in der Filiale</p>
+      <p class="cart-note nl">Betaling bij afhalen in de winkel</p>
+    </div>
+    <div class="cart-foot" id="cart-foot">
+      <div class="cart-total">
+        <span class="de">Gesamt:</span><span class="nl">Totaal:</span>
+        <strong id="cart-total">€ 0,00</strong>
+      </div>
+      <button class="btn btn-wa" style="width:100%;justify-content:center" onclick="goOrder()">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="de">Jetzt per WhatsApp bestellen</span><span class="nl">Nu bestellen via WhatsApp</span>
+      </button>
+      <p class="cart-note de">Kostenlose Vorbestellung · Zahlung bei Abholung</p>
+      <p class="cart-note nl">Gratis voorbestellen · Betaling bij afhalen</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     CHATBOT
+============================================================ -->
+<div id="chat-box">
+  <div class="chat-hdr">
+    <div class="chat-hdr-info">
+      <div class="chat-av">💬</div>
+      <div>
+        <h4>TabakXXL Chat</h4>
+        <p class="de">Wie kann ich helfen?</p><p class="nl">Hoe kan ik helpen?</p>
+      </div>
+    </div>
+    <button class="chat-x" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="chat-msgs" id="chat-msgs"></div>
+  <div class="chat-qs" id="chat-qs">
+    <span class="cq" onclick="askQ('hours')"><span class="de">Öffnungszeiten</span><span class="nl">Openingstijden</span></span>
+    <span class="cq" onclick="askQ('prices')"><span class="de">Preise</span><span class="nl">Prijzen</span></span>
+    <span class="cq" onclick="askQ('location')"><span class="de">Standort</span><span class="nl">Locatie</span></span>
+    <span class="cq" onclick="askQ('assortment')"><span class="de">Sortiment</span><span class="nl">Assortiment</span></span>
+    <span class="cq" onclick="askQ('actions')"><span class="de">Aktionen</span><span class="nl">Acties</span></span>
+    <span class="cq" onclick="askQ('order')"><span class="de">Bestellen</span><span class="nl">Bestellen</span></span>
+    <span class="cq" onclick="showChatCF()"><span class="de">Eigene Frage</span><span class="nl">Eigen vraag</span></span>
+  </div>
+  <div id="chat-cf">
+    <h5><span class="de">Kontaktdaten für Rückfrage:</span><span class="nl">Contactgegevens:</span></h5>
+    <input class="ccf-in" type="text" id="ccf-name" placeholder="Name / Naam">
+    <input class="ccf-in" type="tel" id="ccf-tel" placeholder="Telefon * / Telefoon *">
+    <input class="ccf-in" type="text" id="ccf-q" placeholder="Ihre Frage... / Uw vraag...">
+    <button class="btn btn-wa" style="width:100%;justify-content:center;font-size:.8rem;padding:9px" onclick="sendChatWA()">
+      <span class="de">Via WhatsApp senden</span><span class="nl">Via WhatsApp sturen</span>
+    </button>
+    <p class="ccf-bk" onclick="hideChatCF()">← <span class="de">Zurück</span><span class="nl">Terug</span></p>
+  </div>
+  <div class="chat-inp-row" id="chat-inp-row">
+    <input class="chat-inp" id="chat-inp" placeholder="Nachricht... / Bericht..." onkeydown="if(event.key==='Enter')sendChatMsg()">
+    <button class="chat-send" onclick="sendChatMsg()">→</button>
+  </div>
+</div>
+
+<!-- ============================================================
+     ADMIN LOGIN
+============================================================ -->
+<div id="admin-login">
+  <div class="al-box">
+    <h3>🔐 Admin</h3>
+    <p><span class="de">Bitte Passwort eingeben</span><span class="nl">Voer wachtwoord in</span></p>
+    <div class="al-f">
+      <label><span class="de">Passwort</span><span class="nl">Wachtwoord</span></label>
+      <input type="password" id="al-pw" placeholder="••••••••" onkeydown="if(event.key==='Enter')checkAdminPW()">
+    </div>
+    <p id="al-err"><span class="de">❌ Falsches Passwort</span><span class="nl">❌ Onjuist wachtwoord</span></p>
+    <div style="display:flex;gap:8px">
+      <button class="ab ab-gold" style="flex:1" onclick="checkAdminPW()">
+        <span class="de">Einloggen</span><span class="nl">Inloggen</span>
+      </button>
+      <button class="ab ab-out" onclick="closeAdminLogin()">
+        <span class="de">Abbrechen</span><span class="nl">Annuleren</span>
+      </button>
+    </div>
+    <p style="font-size:.68rem;color:var(--t3);text-align:center;margin-top:12px;opacity:.6">
+      <span class="de">Passwort: xxl2024</span>
+    </p>
+  </div>
+</div>
+
+<!-- ============================================================
+     ADMIN PANEL
+============================================================ -->
+<div id="admin-panel">
+  <div style="flex:1" onclick="closeAdminPanel()"></div>
+  <div class="adm-drawer">
+    <div class="adm-hdr">
+      <h2>⚙️ <span>TabakXXL</span> Admin</h2>
+      <button class="adm-x" onclick="closeAdminPanel()">✕</button>
+    </div>
+    <div class="adm-nav">
+      <button class="an on" onclick="aTab(this,'ap-prices')"><span class="de">Preise</span><span class="nl">Prijzen</span></button>
+      <button class="an" onclick="aTab(this,'ap-products')"><span class="de">Sortiment</span><span class="nl">Assortiment</span></button>
+      <button class="an" onclick="aTab(this,'ap-actions')"><span class="de">Aktionen</span><span class="nl">Acties</span></button>
+      <button class="an" onclick="aTab(this,'ap-popup')">Popup</button>
+      <button class="an" onclick="aTab(this,'ap-hours')"><span class="de">Öffnungszeiten</span><span class="nl">Openingstijden</span></button>
+    </div>
+    <div class="adm-body">
+
+      <!-- PRICES -->
+      <div class="adm-sec on" id="ap-prices">
+        <div class="adm-status"><div class="api-dot"></div>
+          <span class="de">API aktiv · Letztes Update: heute 06:42 · Nächstes: 12:42</span>
+          <span class="nl">API actief · Laatste update: vandaag 06:42</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+          <h4><span class="de">Produktpreise verwalten</span><span class="nl">Productprijzen beheren</span></h4>
+          <div style="display:flex;gap:8px">
+            <button class="ab ab-out" onclick="syncAPI()"><span class="de">🔄 API Sync</span><span class="nl">🔄 API Sync</span></button>
+            <button class="ab ab-gold" onclick="saveAllPrices()"><span class="de">Alle speichern</span><span class="nl">Alles opslaan</span></button>
+          </div>
+        </div>
+        <div id="adm-price-rows"></div>
+      </div>
+
+      <!-- PRODUCTS -->
+      <div class="adm-sec" id="ap-products">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
+          <h4><span class="de">Produkte verwalten</span><span class="nl">Producten beheren</span></h4>
+          <button class="ab ab-gold" onclick="toast('Produkt-Formular wird geöffnet...')">+<span class="de"> Produkt hinzufügen</span><span class="nl"> Product toevoegen</span></button>
+        </div>
+        <div class="adm-g">
+          <div class="adm-card">
+            <div class="adm-card-title"><span class="de">Neues Produkt</span><span class="nl">Nieuw product</span></div>
+            <div class="af"><label><span class="de">Name</span><span class="nl">Naam</span></label><input type="text" placeholder="z.B. Marlboro Red"></div>
+            <div class="af"><label><span class="de">Kategorie</span><span class="nl">Categorie</span></label>
+              <select><option class="de">Zigaretten</option><option class="nl">Sigaretten</option><option class="de">Drehtabak</option><option class="nl">Shagtabak</option><option>Stopftabak</option></select></div>
+            <div class="af"><label>Emoji</label><input type="text" placeholder="🚬" maxlength="2"></div>
+            <div class="af"><label>Beschreibung DE</label><textarea placeholder="Beschreibung..."></textarea></div>
+            <div class="af"><label>Beschrijving NL</label><textarea placeholder="Beschrijving..."></textarea></div>
+            <button class="ab ab-gold" style="width:100%;margin-top:4px" onclick="toast('Produkt gespeichert! / Product opgeslagen!')"><span class="de">Speichern</span><span class="nl">Opslaan</span></button>
+          </div>
+          <div class="adm-card">
+            <div class="adm-card-title"><span class="de">Sichtbarkeit</span><span class="nl">Zichtbaarheid</span></div>
+            <div class="tog-row"><span class="de">Nordhorn anzeigen</span><span class="nl">Nordhorn tonen</span><label class="tog"><input type="checkbox" checked><span class="tog-sl"></span></label></div>
+            <div class="tog-row"><span class="de">Gronau anzeigen</span><span class="nl">Gronau tonen</span><label class="tog"><input type="checkbox" checked><span class="tog-sl"></span></label></div>
+            <div class="tog-row"><span class="de">Hervorheben</span><span class="nl">Uitlichten</span><label class="tog"><input type="checkbox"><span class="tog-sl"></span></label></div>
+            <div class="tog-row"><span class="de">Aktionsbadge</span><span class="nl">Actie-badge</span><label class="tog"><input type="checkbox"><span class="tog-sl"></span></label></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACTIONS -->
+      <div class="adm-sec" id="ap-actions">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
+          <h4><span class="de">Aktionen verwalten</span><span class="nl">Acties beheren</span></h4>
+          <button class="ab ab-gold" onclick="toast('Neue Aktion...')">+<span class="de"> Neue Aktion</span><span class="nl"> Nieuwe actie</span></button>
+        </div>
+        <!-- Active actions list -->
+        <div id="adm-actions-list"></div>
+        <!-- Create form -->
+        <div class="adm-g" style="margin-top:20px">
+          <div class="adm-card">
+            <div class="adm-card-title"><span class="de">Aktion erstellen / bearbeiten</span><span class="nl">Actie aanmaken / bewerken</span></div>
+            <div class="af"><label>Titel DE</label><input type="text" id="act-title-de" value="Wochenangebot: Marlboro Red"></div>
+            <div class="af"><label>Titel NL</label><input type="text" id="act-title-nl" value="Weekaanbieding: Marlboro Red"></div>
+            <div class="af"><label><span class="de">Aktionspreis</span><span class="nl">Actieprijs</span></label><input type="number" id="act-price" step="0.01" placeholder="32.00"></div>
+            <div class="af"><label><span class="de">Normalpreis</span><span class="nl">Normale prijs</span></label><input type="number" id="act-orig" step="0.01" placeholder="35.00"></div>
+            <div class="af"><label><span class="de">Gültig bis</span><span class="nl">Geldig tot</span></label><input type="date" id="act-until"></div>
+            <div class="af"><label><span class="de">Standort</span><span class="nl">Vestiging</span></label>
+              <select id="act-loc"><option value="both" class="de">Beide Standorte</option><option value="nordhorn" class="de">Nur Nordhorn</option><option value="gronau" class="de">Nur Gronau</option></select></div>
+            <div class="tog-row"><span class="de">Aktion aktiv</span><span class="nl">Actie actief</span><label class="tog"><input type="checkbox" id="act-active" checked><span class="tog-sl"></span></label></div>
+            <button class="ab ab-gold" style="width:100%;margin-top:12px" onclick="saveAction()"><span class="de">Aktion speichern</span><span class="nl">Actie opslaan</span></button>
+          </div>
+          <div class="adm-card">
+            <div class="adm-card-title"><span class="de">Zeitliche Planung</span><span class="nl">Tijdplanning</span></div>
+            <div class="af"><label><span class="de">Startdatum</span><span class="nl">Startdatum</span></label><input type="date" id="act-start"></div>
+            <div class="af"><label><span class="de">Enddatum</span><span class="nl">Einddatum</span></label><input type="date" id="act-end"></div>
+            <div class="af"><label>Emoji / Icon</label><input type="text" placeholder="🔥" maxlength="2"></div>
+            <div class="tog-row"><span class="de">Automatisch deaktivieren</span><span class="nl">Automatisch deactiveren</span><label class="tog"><input type="checkbox" checked><span class="tog-sl"></span></label></div>
+            <div class="tog-row"><span class="de">In Popup anzeigen</span><span class="nl">In popup tonen</span><label class="tog"><input type="checkbox" checked><span class="tog-sl"></span></label></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- POPUP -->
+      <div class="adm-sec" id="ap-popup">
+        <div class="adm-g">
+          <div class="adm-card">
+            <div class="adm-card-title"><span class="de">Popup Inhalte</span><span class="nl">Popup inhoud</span></div>
+            <div class="af"><label>Label DE</label><input type="text" value="Aktuelle Aktion"></div>
+            <div class="af"><label>Titel DE</label><input type="text" value="🔥 Wochenangebot: Marlboro Red"></div>
+            <div class="af"><label>Text DE</label><textarea>Diese Woche Marlboro Red Stangen zum Aktionspreis von € 32,00!</textarea></div>
+            <div class="af"><label>Label NL</label><input type="text" value="Actuele aanbieding"></div>
+            <div class="af"><label>Titel NL</label><input type="text" value="🔥 Weekaanbieding: Marlboro Red"></div>
+            <div class="af"><label>Text NL</label><textarea>Deze week Marlboro Red voor slechts € 32,00!</textarea></div>
+          </div>
+          <div class="adm-card">
+            <div class="adm-card-title"><span class="de">Einstellungen</span><span class="nl">Instellingen</span></div>
+            <div class="tog-row"><span>Nordhorn</span><label class="tog"><input type="checkbox" checked><span class="tog-sl"></span></label></div>
+            <div class="tog-row"><span>Gronau</span><label class="tog"><input type="checkbox" checked><span class="tog-sl"></span></label></div>
+            <div class="tog-row"><span class="de">Einmal pro Besuch</span><span class="nl">Eénmaal per bezoek</span><label class="tog"><input type="checkbox" checked><span class="tog-sl"></span></label></div>
+            <div class="tog-row"><span class="de">Öffnungszeiten anzeigen</span><span class="nl">Openingstijden tonen</span><label class="tog"><input type="checkbox" checked><span class="tog-sl"></span></label></div>
+            <div class="af" style="margin-top:14px"><label><span class="de">Verzögerung (Sek.)</span><span class="nl">Vertraging (sec.)</span></label><input type="number" value="2" min="0" max="30"></div>
+            <div style="display:flex;gap:8px;margin-top:12px">
+              <button class="ab ab-out" onclick="openPopup()"><span class="de">Vorschau</span><span class="nl">Voorbeeld</span></button>
+              <button class="ab ab-gold" onclick="toast('Popup gespeichert!')"><span class="de">Speichern</span><span class="nl">Opslaan</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOURS -->
+      <div class="adm-sec" id="ap-hours">
+        <div class="adm-g">
+          <div class="adm-card">
+            <div class="adm-card-title">Nordhorn</div>
+            <div class="af"><label class="de">Mo – Do</label><label class="nl">Ma – Do</label><input type="text" id="nh-1" value="08:00 – 18:00 Uhr"></div>
+            <div class="af"><label class="de">Fr – Sa</label><label class="nl">Vr – Za</label><input type="text" id="nh-2" value="08:00 – 19:00 Uhr"></div>
+            <div class="af"><label class="de">Sonntag</label><label class="nl">Zondag</label><input type="text" id="nh-3" value="Geschlossen"></div>
+            <div class="tog-row"><span class="de">„Jetzt geöffnet" aktiv</span><span class="nl">„Nu geopend" actief</span><label class="tog"><input type="checkbox" checked><span class="tog-sl"></span></label></div>
+            <button class="ab ab-gold" style="width:100%;margin-top:14px" onclick="saveHours('nordhorn')"><span class="de">Speichern</span><span class="nl">Opslaan</span></button>
+          </div>
+          <div class="adm-card">
+            <div class="adm-card-title">Gronau</div>
+            <div class="af"><label class="de">Mo – Do</label><label class="nl">Ma – Do</label><input type="text" id="gh-1" value="09:00 – 19:00 Uhr"></div>
+            <div class="af"><label class="de">Fr – Sa</label><label class="nl">Vr – Za</label><input type="text" id="gh-2" value="08:00 – 19:00 Uhr"></div>
+            <div class="af"><label class="de">Sonntag</label><label class="nl">Zondag</label><input type="text" id="gh-3" value="Geschlossen"></div>
+            <div class="tog-row"><span class="de">„Jetzt geöffnet" aktiv</span><span class="nl">„Nu geopend" actief</span><label class="tog"><input type="checkbox" checked><span class="tog-sl"></span></label></div>
+            <button class="ab ab-gold" style="width:100%;margin-top:14px" onclick="saveHours('gronau')"><span class="de">Speichern</span><span class="nl">Opslaan</span></button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- adm-body -->
+  </div><!-- adm-drawer -->
+</div><!-- admin-panel -->
+
+<!-- ============================================================
+     TOAST
+============================================================ -->
+<div id="toast"><span id="toast-icon">✅</span><span id="toast-msg">Gespeichert!</span></div>
+
+<!-- ============================================================
+     MOBILE MENU
+============================================================ -->
+<div id="mob-menu">
+  <a href="#about" onclick="closeMob()"><span class="de">Über uns</span><span class="nl">Over ons</span></a>
+  <a href="#products" onclick="closeMob()"><span class="de">Sortiment</span><span class="nl">Assortiment</span></a>
+  <a href="#prices" onclick="closeMob()"><span class="de">Preise</span><span class="nl">Prijzen</span></a>
+  <a href="#actions" onclick="closeMob()"><span class="de">Aktionen</span><span class="nl">Acties</span></a>
+  <a href="#locations" onclick="closeMob()"><span class="de">Standorte</span><span class="nl">Vestigingen</span></a>
+  <a href="#reviews" onclick="closeMob()"><span class="de">Bewertungen</span><span class="nl">Reviews</span></a>
+  <div class="mob-loc-btn" onclick="resetLoc()">
+    📍 <span id="mob-loc-txt" class="de">Standort wechseln</span><span class="nl">Vestiging wisselen</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav id="nav">
+  <div class="nav-logo">Tabak<span>XXL</span></div>
+  <div class="nav-links">
+    <a href="#about"><span class="de">Über uns</span><span class="nl">Over ons</span></a>
+    <a href="#products"><span class="de">Sortiment</span><span class="nl">Assortiment</span></a>
+    <a href="#prices"><span class="de">Preise</span><span class="nl">Prijzen</span></a>
+    <a href="#actions"><span class="de">Aktionen</span><span class="nl">Acties</span></a>
+    <a href="#locations"><span class="de">Standorte</span><span class="nl">Vestigingen</span></a>
+    <a href="#reviews"><span class="de">Bewertungen</span><span class="nl">Reviews</span></a>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px">
+    <div id="nav-loc-btn" onclick="resetLoc()">
+      <span class="nav-pulse"></span>
+      <span id="nav-loc-txt" class="de">Standort wählen</span>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMob()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="wrap" style="position:relative;z-index:2;width:100%;padding-top:clamp(40px,8vw,80px);padding-bottom:clamp(60px,8vw,100px)">
+    <div class="hero-inner">
+      <div class="hero-tag rv-up">
+        <span class="eyebrow">
+          <span class="de">Ihr Tabak-Spezialist an der Grenze</span>
+          <span class="nl">Uw tabakspecialist aan de grens</span>
+        </span>
+      </div>
+      <h1 class="disp-xl hero-h1 rv-up d1">
+        <span class="de">Bestes Tabak.<br><em>Beste Preise.</em></span>
+        <span class="nl">Beste tabak.<br><em>Beste prijzen.</em></span>
+      </h1>
+      <p class="hero-p rv-up d2">
+        <span class="de">Zigaretten, Drehtabak & Stopftabak zu unschlagbar günstigen deutschen Preisen — direkt an der Grenze, für unsere niederländischen Kunden.</span>
+        <span class="nl">Sigaretten, shagtabak & stopftabak voor onverslaanbaar lage duitse prijzen — direct aan de grens, speciaal voor onze klanten.</span>
+      </p>
+      <div class="hero-cta rv-up d3">
+        <a href="#products" class="btn btn-gold">
+          <span class="de">Sortiment & Preise →</span>
+          <span class="nl">Assortiment & Prijzen →</span>
+        </a>
+        <a href="#locations" class="btn btn-out">
+          <span class="de">Standorte & Öffnungszeiten</span>
+          <span class="nl">Vestigingen & Openingstijden</span>
+        </a>
+      </div>
+      <div class="hero-stats rv-up">
+        <div><div class="hs-num">2</div><div class="hs-lbl de">Filialen</div><div class="hs-lbl nl">Vestigingen</div></div>
+        <div><div class="hs-num">€15</div><div class="hs-lbl de">Max. Ersparnis/Stange</div><div class="hs-lbl nl">Max. besparing/slof</div></div>
+        <div><div class="hs-num">100+</div><div class="hs-lbl de">Produkte</div><div class="hs-lbl nl">Producten</div></div>
+        <div><div class="hs-num">6×</div><div class="hs-lbl de">Pro Woche geöffnet</div><div class="hs-lbl nl">Per week open</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-badge">
+    <div class="hb-tag de">Ø Ersparnis pro Stange</div>
+    <div class="hb-tag nl">Gem. besparing per slof</div>
+    <div class="hb-num">€ 12</div>
+    <div class="hb-desc de">Bis zu €15 günstiger als in den Niederlanden.</div>
+    <div class="hb-desc nl">Tot €15 goedkoper dan in Nederland.</div>
+  </div>
+  <div class="hero-scroll">
+    <span class="de">Entdecken</span><span class="nl">Ontdekken</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq-wrap">
+  <div class="mq-track">
+    <span class="mq-item"><span class="mq-gem">◆</span><span class="de">Beste deutsche Preise</span><span class="nl">Beste Duitse prijzen</span></span>
+    <span class="mq-item"><span class="mq-gem">◆</span> Marlboro · Lucky Strike · L&M · Camel · Winston</span>
+    <span class="mq-item"><span class="mq-gem">◆</span><span class="de">Täglich geöffnet Mo–Sa</span><span class="nl">Dagelijks open Ma–Za</span></span>
+    <span class="mq-item"><span class="mq-gem">◆</span> Nordhorn & Gronau</span>
+    <span class="mq-item"><span class="mq-gem">◆</span><span class="de">Bis zu €15 Ersparnis pro Stange</span><span class="nl">Tot €15 besparing per slof</span></span>
+    <span class="mq-item"><span class="mq-gem">◆</span><span class="de">Vorbestellung per WhatsApp</span><span class="nl">Voorbestellen via WhatsApp</span></span>
+    <span class="mq-item"><span class="mq-gem">◆</span><span class="de">Drehtabak · Stopftabak · Zigaretten</span><span class="nl">Shagtabak · Stopftabak · Sigaretten</span></span>
+    <!-- duplicate for seamless loop -->
+    <span class="mq-item"><span class="mq-gem">◆</span><span class="de">Beste deutsche Preise</span><span class="nl">Beste Duitse prijzen</span></span>
+    <span class="mq-item"><span class="mq-gem">◆</span> Marlboro · Lucky Strike · L&M · Camel · Winston</span>
+    <span class="mq-item"><span class="mq-gem">◆</span><span class="de">Täglich geöffnet Mo–Sa</span><span class="nl">Dagelijks open Ma–Za</span></span>
+    <span class="mq-item"><span class="mq-gem">◆</span> Nordhorn & Gronau</span>
+    <span class="mq-item"><span class="mq-gem">◆</span><span class="de">Bis zu €15 Ersparnis pro Stange</span><span class="nl">Tot €15 besparing per slof</span></span>
+    <span class="mq-item"><span class="mq-gem">◆</span><span class="de">Vorbestellung per WhatsApp</span><span class="nl">Voorbestellen via WhatsApp</span></span>
+    <span class="mq-item"><span class="mq-gem">◆</span><span class="de">Drehtabak · Stopftabak · Zigaretten</span><span class="nl">Shagtabak · Stopftabak · Sigaretten</span></span>
+  </div>
+</div>
+
+<!-- ============================================================
+     ABOUT
+============================================================ -->
+<section id="about" class="sec">
+  <div class="wrap">
+    <div class="g2" style="align-items:center" id="about-grid">
+      <div class="rv-left" style="position:relative;padding-bottom:24px">
+        <div class="about-card">
+          <div class="about-xxl">XXL</div>
+          <h3 class="de">Grenzüberschreitend günstig</h3>
+          <h3 class="nl">Grensoverschreidend voordelig</h3>
+          <p class="de" style="margin-top:10px">Mit zwei Filialen direkt an der Grenze bieten wir das größte Tabaksortiment zu dauerhaft niedrigen deutschen Preisen — täglich für tausende niederländische Kunden.</p>
+          <p class="nl" style="margin-top:10px">Met twee vestigingen direct aan de grens bieden wij het grootste assortiment tegen blijvend lage prijzen — dagelijks voor duizenden Nederlandse klanten.</p>
+          <div class="tv-cta" onclick="window.open('https://www.youtube.com/watch?v=n0juy5MrPN8','_blank')">
+            <div class="tv-play">▶</div>
+            <div class="tv-info">
+              <strong class="de">TV-Reportage: 1Twente über TabakXXL</strong>
+              <strong class="nl">TV-Reportage: 1Twente over TabakXXL</strong>
+              <span class="de">Warum NL-Kunden zu uns kommen →</span>
+              <span class="nl">Waarom NL-klanten naar ons komen →</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-stat">
+          <div class="as-n">€ 15</div>
+          <div class="as-l de">Max. Ersparnis/Stange</div>
+          <div class="as-l nl">Max. besparing/slof</div>
+        </div>
+      </div>
+      <div class="rv-right">
+        <span class="eyebrow de" style="margin-bottom:16px">Über TabakXXL</span>
+        <span class="eyebrow nl" style="margin-bottom:16px">Over TabakXXL</span>
+        <h2 class="disp-md de" style="margin-top:14px;margin-bottom:16px">Ihr verlässlicher Tabak-Spezialist</h2>
+        <h2 class="disp-md nl" style="margin-top:14px;margin-bottom:16px">Uw betrouwbare tabakspecialist</h2>
+        <p class="de" style="color:var(--t2);line-height:1.85;margin-bottom:32px;font-size:.94rem">TabakXXL und Tabak Discount — Ihre Partner für Tabakprodukte zu besten deutschen Preisen, direkt an der Grenze.</p>
+        <p class="nl" style="color:var(--t2);line-height:1.85;margin-bottom:32px;font-size:.94rem">TabakXXL en Tabak Discount — uw partners voor tabaksproducten tegen de beste Duitse prijzen, direct aan de grens.</p>
+        <div class="feat-list">
+          <div class="feat d1"><div class="feat-ico">💰</div><div class="feat-txt"><h4 class="de">Garantiert beste Preise</h4><h4 class="nl">Gegarandeerd beste prijzen</h4><p class="de">Täglich aktualisiert — immer günstiger als in NL.</p><p class="nl">Dagelijks bijgewerkt — altijd goedkoper dan in NL.</p></div></div>
+          <div class="feat d2"><div class="feat-ico">🏪</div><div class="feat-txt"><h4 class="de">100+ Produkte</h4><h4 class="nl">100+ producten</h4><p class="de">Zigaretten, Drehtabak, Stopftabak — täglich verfügbar.</p><p class="nl">Sigaretten, shagtabak, stopftabak — dagelijks beschikbaar.</p></div></div>
+          <div class="feat d3"><div class="feat-ico">📱</div><div class="feat-txt"><h4 class="de">WhatsApp Vorbestellung</h4><h4 class="nl">WhatsApp voorbestelling</h4><p class="de">Online zusammenstellen, vor Ort abholen & bezahlen.</p><p class="nl">Online samenstellen, ophalen & betalen in de winkel.</p></div></div>
+        </div>
+        <a href="#products" class="btn btn-gold">
+          <span class="de">Jetzt vorbestellen →</span><span class="nl">Nu voorbestellen →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUCTS
+============================================================ -->
+<section id="products" class="sec">
+  <div class="wrap">
+    <div class="sec-head rv-up">
+      <span class="eyebrow de">Unser Sortiment</span>
+      <span class="eyebrow nl">Ons Assortiment</span>
+      <h2 class="disp-lg de" style="margin-top:16px">Alle Produkte auf einen Blick</h2>
+      <h2 class="disp-lg nl" style="margin-top:16px">Alle producten in één oogopslag</h2>
+      <div class="divider"></div>
+      <p style="color:var(--t2);max-width:500px;margin:0 auto;font-size:.93rem">
+        <span class="de">Produkte direkt in den Warenkorb legen und per WhatsApp vorbestellen.</span>
+        <span class="nl">Voeg producten toe aan uw winkelwagen en bestel via WhatsApp.</span>
+      </p>
+    </div>
+    <div class="cat-bar rv-up" id="cat-bar">
+      <button class="cat-pill on" onclick="filterCat('all',this)"><span class="de">Alle</span><span class="nl">Alle</span></button>
+      <button class="cat-pill" onclick="filterCat('zig',this)"><span class="de">Zigaretten</span><span class="nl">Sigaretten</span></button>
+      <button class="cat-pill" onclick="filterCat('dreh',this)"><span class="de">Drehtabak</span><span class="nl">Shagtabak</span></button>
+      <button class="cat-pill" onclick="filterCat('stopf',this)">Stopftabak</button>
+    </div>
+    <div class="prod-grid" id="prod-grid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRICES
+============================================================ -->
+<section id="prices" class="sec">
+  <div class="wrap">
+    <div class="sec-head rv-up">
+      <span class="eyebrow de">Aktuelle Preise</span>
+      <span class="eyebrow nl">Actuele Prijzen</span>
+      <h2 class="disp-lg de" style="margin-top:16px">Warum lohnt der Grenzkauf?</h2>
+      <h2 class="disp-lg nl" style="margin-top:16px">Waarom loont grensaankoop?</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="p-compare rv-up">
+      <div class="p-col"><div class="p-flag">🇳🇱</div>
+        <div class="p-country de">Niederlande</div><div class="p-country nl">Nederland</div>
+        <div class="p-amt muted">€ 47</div>
+        <div class="p-note de">Ø Preis pro Stange</div><div class="p-note nl">Gem. prijs per slof</div>
+      </div>
+      <div class="p-vs">VS</div>
+      <div class="p-col win"><div class="p-flag">🇩🇪</div>
+        <div class="p-country">TabakXXL</div>
+        <div class="p-amt gold">€ 32–35</div>
+        <div class="p-note de">Ø Preis pro Stange</div><div class="p-note nl">Gem. prijs per slof</div>
+      </div>
+    </div>
+    <div class="savings-cta rv-up">
+      <div class="savings-pill">💰 <span class="de">Sie sparen bis zu</span><span class="nl">U bespaart tot</span> €15 <span class="de">pro Stange!</span><span class="nl">per slof!</span></div>
+    </div>
+    <div class="p-tabs rv-up">
+      <button class="p-tab on" onclick="prTab(this,'pt-zig')"><span class="de">Zigaretten</span><span class="nl">Sigaretten</span></button>
+      <button class="p-tab" onclick="prTab(this,'pt-dreh')"><span class="de">Drehtabak</span><span class="nl">Shagtabak</span></button>
+      <button class="p-tab" onclick="prTab(this,'pt-stopf')">Stopftabak</button>
+    </div>
+    <div class="ptbl-wrap rv-up">
+      <div id="pt-zig"><table class="ptbl"><thead><tr><th class="de">Marke</th><th class="nl">Merk</th><th class="de">Inhalt</th><th class="nl">Inhoud</th><th class="de">Preis</th><th class="nl">Prijs</th><th></th></tr></thead><tbody id="tbl-zig"></tbody></table></div>
+      <div id="pt-dreh" style="display:none"><table class="ptbl"><thead><tr><th class="de">Marke</th><th class="nl">Merk</th><th class="de">Inhalt</th><th class="nl">Inhoud</th><th class="de">Preis</th><th class="nl">Prijs</th><th></th></tr></thead><tbody id="tbl-dreh"></tbody></table></div>
+      <div id="pt-stopf" style="display:none"><table class="ptbl"><thead><tr><th class="de">Marke</th><th class="nl">Merk</th><th class="de">Inhalt</th><th class="nl">Inhoud</th><th class="de">Preis</th><th class="nl">Prijs</th><th></th></tr></thead><tbody id="tbl-stopf"></tbody></table></div>
+      <div class="api-bar"><div class="api-dot"></div><span class="de">Preise automatisch via API aktualisiert · Letztes Update: heute</span><span class="nl">Prijzen automatisch bijgewerkt via API · Laatste update: vandaag</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ACTIONS
+============================================================ -->
+<section id="actions" class="sec">
+  <div class="wrap">
+    <div class="sec-head rv-up">
+      <span class="eyebrow de">Aktuelle Aktionen</span>
+      <span class="eyebrow nl">Actuele Acties</span>
+      <h2 class="disp-lg de" style="margin-top:16px">Noch mehr sparen</h2>
+      <h2 class="disp-lg nl" style="margin-top:16px">Nog meer besparen</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="act-grid" id="actions-grid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LOCATIONS
+============================================================ -->
+<section id="locations" class="sec">
+  <div class="wrap">
+    <div class="sec-head rv-up">
+      <span class="eyebrow de">Unsere Standorte</span>
+      <span class="eyebrow nl">Onze Vestigingen</span>
+      <h2 class="disp-lg de" style="margin-top:16px">Zwei Filialen für Sie</h2>
+      <h2 class="disp-lg nl" style="margin-top:16px">Twee vestigingen voor u</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="loc-g">
+      <div class="sc rv-left" id="sc-nordhorn">
+        <div class="sc-map"><div class="sc-map-grid"></div><div class="sc-pin">📍</div></div>
+        <div class="sc-body">
+          <div class="sc-tag">Tabak Discount · K11 Tabak Zentrale</div>
+          <h3 class="sc-name">Nordhorn</h3>
+          <p class="sc-addr">Bentheimer Str. 118b · 48529 Nordhorn, DE</p>
+          <div id="nb-badge"></div>
+          <table class="hrs-tbl">
+            <tr><td class="de">Mo – Do</td><td class="nl">Ma – Do</td><td>08:00 – 18:00 Uhr</td></tr>
+            <tr><td class="de">Fr – Sa</td><td class="nl">Vr – Za</td><td>08:00 – 19:00 Uhr</td></tr>
+            <tr><td class="de">Sonntag</td><td class="nl">Zondag</td><td style="color:var(--t3)" class="de">Geschlossen</td><td style="color:var(--t3)" class="nl">Gesloten</td></tr>
+          </table>
+          <div class="sc-btns">
+            <a href="https://maps.google.com/?q=Bentheimer+Str+118b+48529+Nordhorn" target="_blank" class="btn-route">🗺 Route</a>
+            <a href="tel:+49" class="btn-tel">📞 <span class="de">Anrufen</span><span class="nl">Bellen</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="sc rv-right" id="sc-gronau">
+        <div class="sc-map"><div class="sc-map-grid"></div><div class="sc-pin">📍</div></div>
+        <div class="sc-body">
+          <div class="sc-tag">TabakXXL Gronau</div>
+          <h3 class="sc-name">Gronau</h3>
+          <p class="sc-addr">Köningsstr. 66 · 48599 Gronau, DE</p>
+          <div id="gb-badge"></div>
+          <table class="hrs-tbl">
+            <tr><td class="de">Mo – Do</td><td class="nl">Ma – Do</td><td>09:00 – 19:00 Uhr</td></tr>
+            <tr><td class="de">Fr – Sa</td><td class="nl">Vr – Za</td><td>08:00 – 19:00 Uhr</td></tr>
+            <tr><td class="de">Sonntag</td><td class="nl">Zondag</td><td style="color:var(--t3)" class="de">Geschlossen</td><td style="color:var(--t3)" class="nl">Gesloten</td></tr>
+          </table>
+          <div class="sc-btns">
+            <a href="https://maps.google.com/?q=Köningsstr+66+48599+Gronau" target="_blank" class="btn-route">🗺 Route</a>
+            <a href="tel:+49" class="btn-tel">📞 <span class="de">Anrufen</span><span class="nl">Bellen</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     REVIEWS
+============================================================ -->
+<section id="reviews" class="sec">
+  <div class="wrap">
+    <div class="sec-head rv-up">
+      <span class="eyebrow de">Kundenstimmen</span>
+      <span class="eyebrow nl">Klantbeoordelingen</span>
+      <h2 class="disp-lg de" style="margin-top:16px">Was unsere Kunden sagen</h2>
+      <h2 class="disp-lg nl" style="margin-top:16px">Wat onze klanten zeggen</h2>
+      <div class="divider"></div>
+    </div>
+  </div>
+  <div class="rev-wrap rv-up">
+    <div class="rev-track" id="rev-track"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <div class="f-logo">Tabak<span>XXL</span></div>
+        <p class="de">Ihr Tabak-Spezialist an der deutsch-niederländischen Grenze. Beste Preise, zwei Filialen in Nordhorn und Gronau.</p>
+        <p class="nl">Uw tabakspecialist aan de grens. Beste prijzen, twee vestigingen in Nordhorn en Gronau.</p>
+      </div>
+      <div class="f-col">
+        <h4 class="de">Sortiment</h4><h4 class="nl">Assortiment</h4>
+        <ul>
+          <li><a href="#products" class="de">Zigaretten</a><a href="#products" class="nl">Sigaretten</a></li>
+          <li><a href="#products" class="de">Drehtabak</a><a href="#products" class="nl">Shagtabak</a></li>
+          <li><a href="#products">Stopftabak</a></li>
+          <li><a href="#prices" class="de">Aktuelle Preise</a><a href="#prices" class="nl">Actuele prijzen</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4 class="de">Standorte</h4><h4 class="nl">Vestigingen</h4>
+        <ul>
+          <li><a href="#locations">Nordhorn</a></li>
+          <li><a href="#locations">Gronau</a></li>
+          <li><a href="#actions" class="de">Aktionen</a><a href="#actions" class="nl">Acties</a></li>
+          <li><a href="#reviews" class="de">Bewertungen</a><a href="#reviews" class="nl">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="https://tabakxxl.de/pages/impressum" target="_blank">Impressum</a></li>
+          <li><a href="https://tabakxxl.de/pages/datenschutz" target="_blank" class="de">Datenschutz</a><a href="https://tabakxxl.de/pages/datenschutz" target="_blank" class="nl">Privacy</a></li>
+          <li><a href="#" class="de">AGB</a><a href="#" class="nl">Voorwaarden</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bot">
+      <p>© 2026 TabakXXL & Tabak Discount · <span class="de">Alle Rechte vorbehalten</span><span class="nl">Alle rechten voorbehouden</span></p>
+      <div class="age-pill">🔞 <span class="de">Nur für Personen ab 18 Jahren</span><span class="nl">Alleen voor 18+</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+'use strict';
+
+// ===================== CONFIG =====================
+const WA = '4917684565274';
+const ADMIN_PW = 'xxl2024';
+
+// ===================== DATA =====================
+// Products — mutable (admin can edit prices)
+const PRODUCTS = [
+  {id:1,cat:'zig',em:'🚬',de:'Marlboro Red',nl:'Marlboro Red',cDe:'Zigaretten',cNl:'Sigaretten',dDe:'Der Klassiker – vollmundig & kräftig. Stange 10×20.',dNl:'De klassieker – vol & krachtig. Slof 10×20.',price:35.00,actionPrice:32.00,hasAction:true,priceMode:'api'},
+  {id:2,cat:'zig',em:'🚬',de:'Marlboro Gold',nl:'Marlboro Gold',cDe:'Zigaretten',cNl:'Sigaretten',dDe:'Milde Variante für entspannte Momente.',dNl:'Milde variant voor ontspannen momenten.',price:35.00,actionPrice:null,hasAction:false,priceMode:'api'},
+  {id:3,cat:'zig',em:'🚬',de:'L&M Blue Label',nl:'L&M Blue Label',cDe:'Zigaretten',cNl:'Sigaretten',dDe:'Leicht & angenehm – der Bestseller.',dNl:'Licht & aangenaam – de bestseller.',price:33.50,actionPrice:null,hasAction:false,priceMode:'api'},
+  {id:4,cat:'zig',em:'🚬',de:'Lucky Strike Red',nl:'Lucky Strike Red',cDe:'Zigaretten',cNl:'Sigaretten',dDe:'Amerikanische Tradition – kräftig & aromatisch.',dNl:'Amerikaanse traditie – krachtig & aromatisch.',price:34.00,actionPrice:null,hasAction:false,priceMode:'api'},
+  {id:5,cat:'zig',em:'🚬',de:'Camel Filter',nl:'Camel Filter',cDe:'Zigaretten',cNl:'Sigaretten',dDe:'Intensiv und ausgewogen.',dNl:'Intensief en uitgebalanceerd.',price:34.50,actionPrice:null,hasAction:false,priceMode:'api'},
+  {id:6,cat:'zig',em:'🚬',de:'Winston Red',nl:'Winston Red',cDe:'Zigaretten',cNl:'Sigaretten',dDe:'Kräftiger Genuss zu unschlagbarem Preis.',dNl:'Krachtig genot voor onverslaanbare prijs.',price:33.00,actionPrice:null,hasAction:false,priceMode:'api'},
+  {id:7,cat:'zig',em:'🚬',de:'Pall Mall',nl:'Pall Mall',cDe:'Zigaretten',cNl:'Sigaretten',dDe:'Attraktiver Preis mit gutem Aroma.',dNl:'Aantrekkelijke prijs met goed aroma.',price:31.00,actionPrice:null,hasAction:false,priceMode:'api'},
+  {id:8,cat:'dreh',em:'🌿',de:'Lucky Strike Drehtabak',nl:'Lucky Strike Shagtabak',cDe:'Drehtabak',cNl:'Shagtabak',dDe:'100g – Spitzenklasse für anspruchsvolle Raucher.',dNl:'100g – topkwaliteit voor veeleisende rokers.',price:13.50,actionPrice:11.80,hasAction:true,priceMode:'api'},
+  {id:9,cat:'dreh',em:'🌿',de:'Drum Blue Drehtabak',nl:'Drum Blue Shagtabak',cDe:'Drehtabak',cNl:'Shagtabak',dDe:'Leichter Drehtabak mit mildem Aroma. 100g.',dNl:'Lichte shagtabak met mild aroma. 100g.',price:13.00,actionPrice:null,hasAction:false,priceMode:'api'},
+  {id:10,cat:'dreh',em:'🌿',de:'Marlboro Drehtabak',nl:'Marlboro Shagtabak',cDe:'Drehtabak',cNl:'Shagtabak',dDe:'Das bekannte Marlboro Aroma als Drehtabak. 100g.',dNl:'Het bekende Marlboro aroma als shagtabak.',price:14.00,actionPrice:null,hasAction:false,priceMode:'api'},
+  {id:11,cat:'dreh',em:'🌿',de:'American Spirit',nl:'American Spirit',cDe:'Drehtabak',cNl:'Shagtabak',dDe:'Natürlicher Tabak ohne Zusatzstoffe. 40g.',dNl:'Natuurlijke tabak zonder toevoegingen.',price:10.50,actionPrice:null,hasAction:false,priceMode:'api'},
+  {id:12,cat:'stopf',em:'🍃',de:'Camel Stopftabak',nl:'Camel Stopftabak',cDe:'Stopftabak',cNl:'Stopftabak',dDe:'Hochwertiger Stopftabak. 100g.',dNl:'Hoogwaardige stopftabak. 100g.',price:12.00,actionPrice:null,hasAction:false,priceMode:'api'},
+  {id:13,cat:'stopf',em:'🍃',de:'Winston Stopftabak',nl:'Winston Stopftabak',cDe:'Stopftabak',cNl:'Stopftabak',dDe:'Kräftiger aromatischer Stopftabak. 100g.',dNl:'Krachtige aromatische stopftabak.',price:11.50,actionPrice:null,hasAction:false,priceMode:'api'},
+  {id:14,cat:'stopf',em:'🍃',de:'L&M Stopftabak',nl:'L&M Stopftabak',cDe:'Stopftabak',cNl:'Stopftabak',dDe:'Milder Stopftabak für jeden Tag. 80g.',dNl:'Milde stopftabak voor iedere dag.',price:10.80,actionPrice:null,hasAction:false,priceMode:'api'},
+];
+
+const PRICE_ROWS = {
+  zig:[
+    {b:'Marlboro Red',c:'Stange 200 St.',p:35.00,a:32.00},
+    {b:'Marlboro Gold',c:'Stange 200 St.',p:35.00,a:null},
+    {b:'L&M Blue',c:'Stange 200 St.',p:33.50,a:null},
+    {b:'Lucky Strike Red',c:'Stange 200 St.',p:34.00,a:null},
+    {b:'Camel Filter',c:'Stange 200 St.',p:34.50,a:null},
+    {b:'Winston Red',c:'Stange 200 St.',p:33.00,a:null},
+    {b:'Philip Morris',c:'Stange 200 St.',p:34.00,a:null},
+    {b:'Pall Mall',c:'Stange 200 St.',p:31.00,a:null},
+    {b:'West',c:'Stange 200 St.',p:30.50,a:null},
+    {b:'HB',c:'Stange 200 St.',p:30.00,a:null},
+  ],
+  dreh:[
+    {b:'Lucky Strike Original',c:'100g',p:13.50,a:11.80},
+    {b:'Drum Blue',c:'100g',p:13.00,a:null},
+    {b:'Drum Green',c:'100g',p:13.00,a:null},
+    {b:'Marlboro',c:'100g',p:14.00,a:null},
+    {b:'American Spirit',c:'40g',p:10.50,a:null},
+    {b:'Bali Shag',c:'100g',p:12.50,a:null},
+  ],
+  stopf:[
+    {b:'Camel',c:'100g',p:12.00,a:null},
+    {b:'Winston',c:'100g',p:11.50,a:null},
+    {b:'L&M',c:'80g',p:10.80,a:null},
+    {b:'Pall Mall',c:'100g',p:11.00,a:null},
+    {b:'West',c:'100g',p:10.50,a:null},
+  ]
+};
+
+// Actions — mutable
+let ACTIONS = [
+  {id:1,de:'Wochenangebot: Marlboro Red',nl:'Weekaanbieding: Marlboro Red',
+   descDe:'Der Klassiker zum Hammer-Preis! Marlboro Red Stange (10×20) im Sonderangebot.',
+   descNl:'De klassieker voor een geweldige prijs! Marlboro Red slof in aanbieding.',
+   price:32.00,orig:35.00,until:'2026-03-31',loc:'both',active:true,hot:true,emoji:'🔥'},
+  {id:2,de:'Monatsangebot: Lucky Strike',nl:'Maandaanbieding: Lucky Strike',
+   descDe:'Lucky Strike Drehtabak 100g jetzt zum reduzierten Preis in Gronau.',
+   descNl:'Lucky Strike Shagtabak 100g nu voor verlaagde prijs in Gronau.',
+   price:11.80,orig:13.50,until:'2026-03-15',loc:'gronau',active:true,hot:false,emoji:'⭐'},
+  {id:3,de:'Stammkunden-Tipp: L&M Blue Bundle',nl:'Vaste klant tip: L&M Blue Bundle',
+   descDe:'L&M Blue Stange + Feuerzeug kostenlos! Solange Vorrat reicht.',
+   descNl:'L&M Blue slof + aansteker gratis! Zolang de voorraad strekt.',
+   price:33.50,orig:null,until:'2026-03-31',loc:'both',active:true,hot:false,emoji:'💎'},
+];
+
+const REVIEWS = [
+  {n:'Jan van der Berg',f:'Enschede, NL',de:'"Seit dem Supermarktverbot fahre ich wöchentlich nach Nordhorn. Super Auswahl, unschlagbare Preise!"',nl:'"Sinds het supermarktverbod rijd ik wekelijks naar Nordhorn. Geweldig assortiment!"'},
+  {n:'Maria Hoekstra',f:'Almelo, NL',de:'"TabakXXL Gronau ist mein Stammgeschäft. Nettes Personal, immer gut bestückt."',nl:'"TabakXXL Gronau is mijn vaste winkel. Vriendelijk personeel, altijd goed voorzien."'},
+  {n:'Peter Kuipers',f:'Hengelo, NL',de:'"Drehtabak deutlich günstiger als zu Hause. Sehr empfehlenswert!"',nl:'"Shagtabak veel goedkoper dan thuis. Zeker aanbevolen!"'},
+  {n:'Sophie Bakker',f:'Enschede, NL',de:'"Schnell, freundlich, günstig. Bin jede Woche hier und komme immer gerne wieder."',nl:'"Snel, vriendelijk, goedkoop. Ben er elke week en kom altijd graag terug."'},
+  {n:'Thomas Müller',f:'Bad Bentheim, DE',de:'"Immer die aktuellen Preise und tolle Aktionen. Top Geschäft!"',nl:'"Altijd actuele prijzen en geweldige acties. Top winkel!"'},
+  {n:'Anke de Vries',f:'Oldenzaal, NL',de:'"Die WhatsApp-Vorbestellung ist super praktisch! Einfach bestellen und abholen."',nl:'"De WhatsApp-voorbestelling is super handig! Gewoon bestellen en ophalen."'},
+  {n:'Hendrik Jansen',f:'Denekamp, NL',de:'"Riesige Auswahl, faire Preise. Der Weg nach Gronau lohnt sich immer."',nl:'"Uitgebreid assortiment, eerlijke prijzen. De rit naar Gronau loont altijd."'},
+  {n:'Lieke Smit',f:'Enschede, NL',de:'"Freundliches Personal, sauberes Geschäft, günstige Preise. Was will man mehr?"',nl:'"Vriendelijk personeel, nette winkel, goede prijzen. Wat wil je nog meer?"'},
+  {n:'Kevin Brouwer',f:'Hengelo, NL',de:'"Alle Marken verfügbar, immer frische Ware und top Preise. Absolut empfehlenswert!"',nl:'"Alle merken beschikbaar, altijd verse producten. Absoluut aanbevolen!"'},
+  {n:'Sanne Visser',f:'Almelo, NL',de:'"Mein fester Stop! Schnell, günstig und super freundlich."',nl:'"Mijn vaste stop! Snel, goedkoop en super vriendelijk."'},
+  {n:'Dirk Hoffman',f:'Nordhorn, DE',de:'"Als Nordhorner bin ich froh, so ein gutes Geschäft vor Ort zu haben."',nl:'"Als inwoner ben ik blij zo\'n goede winkel te hebben."'},
+  {n:'Lies van Dam',f:'Enschede, NL',de:'"Immer aktuelle Aktionen. Das ist mein Lieblingsgeschäft für Tabak!"',nl:'"Altijd actuele aanbiedingen. Mijn favoriete winkel voor tabak!"'},
+];
+
+// ===================== STATE =====================
+let lang = 'de';
+let loc = null;
+let cart = [];
+let catFilter = 'all';
+let chatOpen = false;
+let adminUnlocked = false;
+
+// ===================== FORMAT =====================
+const fmt = p => '€ ' + p.toFixed(2).replace('.', ',');
+
+// ===================== LANGUAGE =====================
+function setLang(l) {
+  lang = l;
+  document.querySelectorAll('.lb').forEach(b => b.classList.toggle('on', b.textContent.trim() === l.toUpperCase()));
+  if (l === 'nl') {
+    document.body.classList.add('nl-on');
+  } else {
+    document.body.classList.remove('nl-on');
+  }
+  renderProducts(catFilter);
+  renderPriceTables();
+  updateNavLoc();
+}
+
+// ===================== LOCATION =====================
+function selectLoc(l) {
+  loc = l;
+  document.getElementById('loc-overlay').style.display = 'none';
+  updateNavLoc();
+  highlightStore();
+  checkOpenStatus();
+  updateCartLoc();
+  renderActions();
+  setTimeout(openPopup, 2500);
+}
+
+function resetLoc() {
+  document.getElementById('loc-overlay').style.display = 'flex';
+  closeMob();
+}
+
+function updateNavLoc() {
+  const names = {nordhorn:'Nordhorn', gronau:'Gronau'};
+  const txt = loc ? names[loc] : (lang==='de'?'Standort wählen':'Kies vestiging');
+  document.getElementById('nav-loc-txt').textContent = txt;
+}
+
+function highlightStore() {
+  ['nordhorn','gronau'].forEach(l => {
+    const el = document.getElementById('sc-' + l);
+    if (el) el.classList.toggle('active-store', l === loc);
+  });
+}
+
+function checkOpenStatus() {
+  const now = new Date();
+  const d = now.getDay(), h = now.getHours() + now.getMinutes()/60;
+  const open = (o,c) => h >= o && h < c;
+  const nOpen = d>=1&&d<=4?open(8,18):d===5||d===6?open(8,19):false;
+  const gOpen = d>=1&&d<=4?open(9,19):d===5||d===6?open(8,19):false;
+  const mk = isOpen => isOpen
+    ? `<span class="open-badge">🟢 <span class="de">Jetzt geöffnet</span><span class="nl">Nu geopend</span></span>`
+    : `<span class="closed-badge">🔴 <span class="de">Geschlossen</span><span class="nl">Gesloten</span></span>`;
+  const nb = document.getElementById('nb-badge'), gb = document.getElementById('gb-badge');
+  if (nb) nb.innerHTML = mk(nOpen);
+  if (gb) gb.innerHTML = mk(gOpen);
+}
+
+// ===================== PRODUCTS =====================
+function filterCat(cat, btn) {
+  catFilter = cat;
+  document.querySelectorAll('.cat-pill').forEach(b => b.classList.remove('on'));
+  if (btn) btn.classList.add('on');
+  renderProducts(cat);
+}
+
+function renderProducts(cat) {
+  const grid = document.getElementById('prod-grid');
+  const list = cat === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === cat);
+  grid.innerHTML = list.map(p => {
+    const n = lang === 'nl' ? p.nl : p.de;
+    const c = lang === 'nl' ? p.cNl : p.cDe;
+    const d = lang === 'nl' ? p.dNl : p.dDe;
+    const price = p.hasAction && p.actionPrice ? p.actionPrice : p.price;
+    return `
+    <div class="pc">
+      ${p.hasAction?`<span class="pc-badge">AKTION</span>`:''}
+      <div class="pc-img">${p.em}</div>
+      <div class="pc-body">
+        <div class="pc-cat">${c}</div>
+        <div class="pc-name">${n}</div>
+        <div class="pc-desc">${d}</div>
+        <div class="pc-row">
+          <div class="pc-price">
+            <span class="pc-cur">${fmt(price)}</span>
+            ${p.hasAction&&p.actionPrice?`<span class="pc-old">${fmt(p.price)}</span>`:''}
+          </div>
+          <button class="pc-add" onclick="addById(${p.id})" title="${lang==='de'?'In Warenkorb':'In winkelwagen'}">+</button>
+        </div>
+        <div class="pc-avail"><span class="avail-dot"></span><span class="de">Verfügbar</span><span class="nl">Beschikbaar</span></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ===================== PRICE TABLES =====================
+function renderPriceTables() {
+  ['zig','dreh','stopf'].forEach(cat => {
+    const tbody = document.getElementById('tbl-' + cat);
+    if (!tbody) return;
+    tbody.innerHTML = PRICE_ROWS[cat].map(r => `
+      <tr>
+        <td class="td-brand">${r.b}</td>
+        <td class="td-cnt">${r.c}</td>
+        <td>${r.a
+          ? `<span class="td-promo">${fmt(r.a)}</span><span class="td-badge">AKTION</span><span class="td-old">${fmt(r.p)}</span>`
+          : `<span class="td-price">${fmt(r.p)}</span>`
+        }</td>
+        <td><button class="tbl-add" onclick="addByName('${r.b}',${r.a||r.p},'🚬')">+</button></td>
+      </tr>`).join('');
+  });
+}
+
+function prTab(btn, id) {
+  document.querySelectorAll('.p-tab').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  ['pt-zig','pt-dreh','pt-stopf'].forEach(i => {
+    document.getElementById(i).style.display = i === id ? 'block' : 'none';
+  });
+}
+
+// ===================== ACTIONS =====================
+function renderActions() {
+  const grid = document.getElementById('actions-grid');
+  const filtered = ACTIONS.filter(a => {
+    if (!a.active) return false;
+    if (a.loc === 'both') return true;
+    if (loc && a.loc === loc) return true;
+    if (!loc) return true;
+    return false;
+  });
+  if (!filtered.length) {
+    grid.innerHTML = `<p style="color:var(--t3);text-align:center;padding:40px 0">
+      <span class="de">Aktuell keine Aktionen für diesen Standort.</span>
+      <span class="nl">Momenteel geen acties voor deze vestiging.</span></p>`;
+    return;
+  }
+  grid.innerHTML = filtered.map(a => `
+    <div class="ac${a.hot?' hot':''}">
+      <div class="ac-head">
+        <div class="ac-type">${a.emoji} <span class="de">${a.de.split(':')[0]}</span><span class="nl">${a.nl.split(':')[0]}</span></div>
+        <h3 class="ac-title"><span class="de">${a.de.includes(':')?a.de.split(':').slice(1).join(':').trim():a.de}</span><span class="nl">${a.nl.includes(':')?a.nl.split(':').slice(1).join(':').trim():a.nl}</span></h3>
+        <p class="ac-desc"><span class="de">${a.descDe}</span><span class="nl">${a.descNl}</span></p>
+      </div>
+      <div class="ac-body">
+        <div class="ac-price">${fmt(a.price)}${a.orig?` <span style="font-size:.72rem;font-weight:400;text-decoration:line-through;opacity:.55">${fmt(a.orig)}</span>`:''}</div>
+        <div class="ac-meta"><span class="de">Gültig bis ${a.until}</span><span class="nl">Geldig tot ${a.until}</span></div>
+        <span class="ac-loc">📍 <span class="de">${a.loc==='both'?'Beide Standorte':a.loc==='nordhorn'?'Nur Nordhorn':'Nur Gronau'}</span><span class="nl">${a.loc==='both'?'Beide vestigingen':a.loc==='nordhorn'?'Alleen Nordhorn':'Alleen Gronau'}</span></span>
+        <button class="ac-add" onclick="addByName('${lang==='nl'?a.nl:a.de}',${a.price},'${a.emoji}')">
+          <span class="de">In den Warenkorb</span><span class="nl">In winkelwagen</span>
+        </button>
+      </div>
+    </div>`).join('');
+}
+
+function renderAdmActions() {
+  const el = document.getElementById('adm-actions-list');
+  if (!el) return;
+  el.innerHTML = ACTIONS.map((a,i) => `
+    <div class="act-row">
+      <span style="font-size:1.1rem">${a.emoji}</span>
+      <div style="flex:1;min-width:0">
+        <div class="act-row-name">${lang==='nl'?a.nl:a.de}</div>
+        <div class="act-row-meta"><span class="de">Bis</span><span class="nl">Tot</span> ${a.until} · ${fmt(a.price)} · <span class="de">${a.loc==='both'?'Beide':a.loc}</span></div>
+      </div>
+      <span class="act-row-status ${a.active?'active':'inactive'}">${a.active?'● Aktiv':'● Inaktiv'}</span>
+      <button class="ab ab-out" style="padding:5px 10px;font-size:.72rem" onclick="toggleAction(${i})">${a.active?'⏸':'▶'}</button>
+      <button class="ab ab-danger" style="padding:5px 10px;font-size:.72rem" onclick="deleteAction(${i})">✕</button>
+    </div>`).join('') || '<p style="color:var(--t3);font-size:.84rem">Keine Aktionen.</p>';
+}
+
+function toggleAction(i) {
+  ACTIONS[i].active = !ACTIONS[i].active;
+  renderAdmActions();
+  renderActions();
+  toast(ACTIONS[i].active ? '▶ Aktion aktiviert' : '⏸ Aktion deaktiviert');
+}
+
+function deleteAction(i) {
+  ACTIONS.splice(i, 1);
+  renderAdmActions();
+  renderActions();
+  toast('🗑 Aktion gelöscht');
+}
+
+function saveAction() {
+  const titleDe = document.getElementById('act-title-de').value.trim();
+  const price = parseFloat(document.getElementById('act-price').value);
+  if (!titleDe || isNaN(price)) { toast('⚠️ Bitte alle Pflichtfelder ausfüllen', 'warn'); return; }
+  const newAct = {
+    id: Date.now(),
+    de: titleDe,
+    nl: document.getElementById('act-title-nl').value.trim() || titleDe,
+    descDe: 'Aktionsbeschreibung',
+    descNl: 'Actiebeschrijving',
+    price,
+    orig: parseFloat(document.getElementById('act-orig').value) || null,
+    until: document.getElementById('act-until').value || '2026-12-31',
+    loc: document.getElementById('act-loc').value,
+    active: document.getElementById('act-active').checked,
+    hot: false, emoji: '🔥'
+  };
+  ACTIONS.unshift(newAct);
+  renderAdmActions();
+  renderActions();
+  toast('✅ Aktion gespeichert!');
+}
+
+// ===================== CART =====================
+function addById(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  if (!p) return;
+  const name = lang === 'nl' ? p.nl : p.de;
+  const price = p.hasAction && p.actionPrice ? p.actionPrice : p.price;
+  addItem(id, name, price, p.em);
+}
+
+function addByName(name, price, em) {
+  const id = 'x-' + name.replace(/\s+/g, '');
+  addItem(id, name, price, em || '🚬');
+}
+
+function addItem(id, name, price, em) {
+  const ex = cart.find(c => c.id === id);
+  if (ex) ex.qty++;
+  else cart.push({id, name, price, em, qty:1});
+  updateCartUI();
+  toast(`🛒 ${name} ${lang==='de'?'hinzugefügt':'toegevoegd'}`);
+}
+
+function removeItem(id) {
+  cart = cart.filter(c => c.id !== id);
+  updateCartUI();
+}
+
+function changeQty(id, d) {
+  const item = cart.find(c => c.id === id);
+  if (!item) return;
+  item.qty += d;
+  if (item.qty <= 0) removeItem(id);
+  else updateCartUI();
+}
+
+function updateCartUI() {
+  const total = cart.reduce((s,c) => s + c.price * c.qty, 0);
+  const count = cart.reduce((s,c) => s + c.qty, 0);
+  // Badge
+  const badge = document.getElementById('cart-badge');
+  badge.textContent = count;
+  badge.classList.toggle('show', count > 0);
+  // Total
+  document.getElementById('cart-total').textContent = fmt(total);
+  // List
+  const list = document.getElementById('cart-list');
+  if (cart.length === 0) {
+    list.innerHTML = `
+      <div class="cart-empty">
+        <div class="ce-icon">🛒</div>
+        <p class="de">Ihr Warenkorb ist leer.<br>Fügen Sie Produkte hinzu und bestellen Sie per WhatsApp!</p>
+        <p class="nl">Uw winkelwagen is leeg.<br>Voeg producten toe en bestel via WhatsApp!</p>
+        <a onclick="closeCart();document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+          <span class="de">Jetzt einkaufen →</span>
+          <span class="nl">Nu winkelen →</span>
+        </a>
+      </div>`;
+  } else {
+    list.innerHTML = cart.map(c => `
+      <div class="ci">
+        <div class="ci-em">${c.em}</div>
+        <div class="ci-inf">
+          <div class="ci-name">${c.name}</div>
+          <div class="ci-price">${fmt(c.price)} <span style="font-size:.7rem;color:var(--t3)" class="de">je Stk.</span><span style="font-size:.7rem;color:var(--t3)" class="nl">per stk.</span></div>
+        </div>
+        <div class="ci-ctrl">
+          <button class="ci-q" onclick="changeQty('${c.id}',-1)">−</button>
+          <span class="ci-n">${c.qty}</span>
+          <button class="ci-q" onclick="changeQty('${c.id}',1)">+</button>
+          <button class="ci-del" onclick="removeItem('${c.id}')">🗑</button>
+        </div>
+      </div>`).join('');
+  }
+}
+
+function updateCartLoc() {
+  const names = {nordhorn:'Nordhorn – Tabak Discount', gronau:'Gronau – TabakXXL'};
+  if (loc) document.getElementById('cart-loc-name').textContent = names[loc];
+}
+
+function openCart() {
+  document.getElementById('cart-drawer').classList.add('open');
+  document.getElementById('order-form').classList.remove('show');
+  document.getElementById('cart-items-wrap').style.display = 'block';
+  document.getElementById('cart-foot').style.display = 'block';
+  updateCartUI();
+}
+
+function closeCart() { document.getElementById('cart-drawer').classList.remove('open'); }
+
+function goOrder() {
+  if (cart.length === 0) { toast(lang==='de'?'⚠️ Warenkorb ist leer!':'⚠️ Winkelwagen is leeg!'); return; }
+  document.getElementById('cart-items-wrap').style.display = 'none';
+  document.getElementById('cart-foot').style.display = 'none';
+  document.getElementById('order-form').classList.add('show');
+}
+
+function backToCart() {
+  document.getElementById('cart-items-wrap').style.display = 'block';
+  document.getElementById('cart-foot').style.display = 'block';
+  document.getElementById('order-form').classList.remove('show');
+}
+
+function sendWA() {
+  const name = document.getElementById('o-name').value.trim();
+  const tel  = document.getElementById('o-tel').value.trim();
+  if (!name || !tel) { toast(lang==='de'?'⚠️ Name & Telefon erforderlich!':'⚠️ Naam & telefoon vereist!'); return; }
+  const locName = loc === 'nordhorn' ? 'Nordhorn – Tabak Discount' : loc === 'gronau' ? 'Gronau – TabakXXL' : 'Unbekannt';
+  const total = cart.reduce((s,c) => s + c.price*c.qty, 0);
+  const lines = cart.map(c => `• ${c.qty}× ${c.name} — ${fmt(c.price*c.qty)}`).join('\n');
+  const msg = `🛒 *VORBESTELLUNG TabakXXL*\n\n📍 *Standort:* ${locName}\n👤 *Name:* ${name}\n📞 *Telefon:* ${tel}\n\n*Produkte:*\n${lines}\n\n💰 *Gesamtpreis: ${fmt(total)}*\n\n_Bezahlung bei Abholung vor Ort. Keine Vorauszahlung._`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank');
+  cart = [];
+  updateCartUI();
+  closeCart();
+  toast('✅ Bestellung via WhatsApp gesendet!');
+}
+
+// ===================== POPUP =====================
+function openPopup() {
+  if (sessionStorage.getItem('popup-no')) return;
+  document.getElementById('popup-wrap').classList.add('open');
+  // Adjust hours for gronau
+  if (loc === 'gronau') {
+    document.getElementById('pp-h1').querySelector('span:last-child').textContent = '09:00 – 19:00 Uhr';
+  }
+}
+function closePopup() { document.getElementById('popup-wrap').classList.remove('open'); }
+function noPopup() { sessionStorage.setItem('popup-no','1'); closePopup(); }
+
+// ===================== ADMIN =====================
+function openAdmin() {
+  if (adminUnlocked) {
+    openAdminPanel();
+  } else {
+    document.getElementById('admin-login').classList.add('open');
+    setTimeout(() => document.getElementById('al-pw').focus(), 100);
+  }
+}
+
+function checkAdminPW() {
+  const pw = document.getElementById('al-pw').value;
+  const errEl = document.getElementById('al-err');
+  if (pw === ADMIN_PW) {
+    adminUnlocked = true;
+    closeAdminLogin();
+    openAdminPanel();
+    toast('✅ Admin-Zugang gewährt');
+  } else {
+    errEl.classList.add('show');
+    document.getElementById('al-pw').value = '';
+    document.getElementById('al-pw').focus();
+    setTimeout(() => errEl.classList.remove('show'), 3000);
+  }
+}
+
+function closeAdminLogin() {
+  document.getElementById('admin-login').classList.remove('open');
+  document.getElementById('al-pw').value = '';
+  document.getElementById('al-err').classList.remove('show');
+}
+
+function openAdminPanel() {
+  document.getElementById('admin-panel').classList.add('open');
+  renderAdmPrices();
+  renderAdmActions();
+}
+
+function closeAdminPanel() {
+  document.getElementById('admin-panel').classList.remove('open');
+}
+
+function aTab(btn, id) {
+  document.querySelectorAll('.an').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.adm-sec').forEach(s => s.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  if (id === 'ap-actions') renderAdmActions();
+}
+
+// ===================== ADMIN PRICES (FIXED) =====================
+function renderAdmPrices() {
+  const container = document.getElementById('adm-price-rows');
+  if (!container) return;
+  container.innerHTML = PRODUCTS.map(p => {
+    const dispPrice = p.hasAction && p.actionPrice ? p.actionPrice : p.price;
+    return `
+    <div class="apr" id="apr-${p.id}">
+      <div class="apr-top">
+        <span class="apr-em">${p.em}</span>
+        <span class="apr-name">${p.de}</span>
+        <span class="apr-price-display" id="apr-disp-${p.id}">${fmt(dispPrice)}</span>
+        <span class="apr-mode-tag" id="apr-mode-${p.id}">${p.priceMode === 'api' ? '🔄 API' : '✏️ Manuell'}</span>
+        <button class="apr-edit-btn" onclick="togglePriceEdit(${p.id})" title="Preis bearbeiten">✏️</button>
+      </div>
+      <div class="apr-edit-form" id="aef-${p.id}">
+        <div class="price-mode-row">
+          <span class="pm-opt ${p.priceMode==='api'?'sel':''}" onclick="setPriceMode(${p.id},'api',this)">🔄 <span class="de">Automatisch (API)</span><span class="nl">Automatisch (API)</span></span>
+          <span class="pm-opt ${p.priceMode==='manual'?'sel':''}" onclick="setPriceMode(${p.id},'manual',this)">✏️ <span class="de">Manuell</span><span class="nl">Handmatig</span></span>
+        </div>
+        <div class="aef-row">
+          <div class="aef-f">
+            <label><span class="de">Normalpreis (€)</span><span class="nl">Normale prijs (€)</span></label>
+            <input type="number" id="aef-p-${p.id}" step="0.01" value="${p.price.toFixed(2)}" placeholder="35.00">
+          </div>
+          <div class="aef-f">
+            <label><span class="de">Aktionspreis (€, opt.)</span><span class="nl">Actieprijs (€, opt.)</span></label>
+            <input type="number" id="aef-a-${p.id}" step="0.01" value="${p.actionPrice ? p.actionPrice.toFixed(2) : ''}" placeholder="leer = kein Aktionspreis">
+          </div>
+          <div style="display:flex;gap:6px;align-items:flex-end;flex-shrink:0">
+            <button class="ab ab-gold" onclick="savePriceEdit(${p.id})"><span class="de">Speichern</span><span class="nl">Opslaan</span></button>
+            <button class="ab ab-out" onclick="togglePriceEdit(${p.id})"><span class="de">Abbrechen</span><span class="nl">Annuleren</span></button>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function togglePriceEdit(id) {
+  const form = document.getElementById('aef-' + id);
+  form.classList.toggle('show');
+}
+
+function setPriceMode(id, mode, el) {
+  el.closest('.price-mode-row').querySelectorAll('.pm-opt').forEach(x => x.classList.remove('sel'));
+  el.classList.add('sel');
+  const p = PRODUCTS.find(x => x.id === id);
+  if (p) p.priceMode = mode;
+  document.getElementById('apr-mode-' + id).textContent = mode === 'api' ? '🔄 API' : '✏️ Manuell';
+}
+
+function savePriceEdit(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  if (!p) return;
+  const newPrice = parseFloat(document.getElementById('aef-p-' + id).value);
+  const newAction = parseFloat(document.getElementById('aef-a-' + id).value);
+  if (isNaN(newPrice) || newPrice <= 0) {
+    toast('⚠️ Ungültiger Preis!'); return;
+  }
+  p.price = newPrice;
+  if (!isNaN(newAction) && newAction > 0) {
+    p.actionPrice = newAction;
+    p.hasAction = true;
+  } else {
+    p.actionPrice = null;
+    p.hasAction = false;
+  }
+  // Update display
+  const dispPrice = p.hasAction && p.actionPrice ? p.actionPrice : p.price;
+  document.getElementById('apr-disp-' + id).textContent = fmt(dispPrice);
+  // Close edit form
+  togglePriceEdit(id);
+  // Re-render shop so changes show immediately
+  renderProducts(catFilter);
+  renderPriceTables();
+  toast(`✅ Preis für "${p.de}" gespeichert: ${fmt(dispPrice)}`);
+}
+
+function saveAllPrices() {
+  renderProducts(catFilter);
+  renderPriceTables();
+  toast('✅ Alle Preise gespeichert & aktualisiert!');
+}
+
+function syncAPI() {
+  toast('🔄 API wird synchronisiert...');
+  setTimeout(() => {
+    renderProducts(catFilter);
+    renderPriceTables();
+    renderAdmPrices();
+    toast('✅ API Sync abgeschlossen!');
+  }, 1500);
+}
+
+function saveHours(loc) {
+  toast(`✅ Öffnungszeiten für ${loc === 'nordhorn' ? 'Nordhorn' : 'Gronau'} gespeichert!`);
+}
+
+// ===================== CHATBOT =====================
+const CHAT = {
+  hours:{de:'Unsere Öffnungszeiten:\n\n📍 Nordhorn: Mo–Do 8–18 Uhr, Fr–Sa 8–19 Uhr\n📍 Gronau: Mo–Do 9–19 Uhr, Fr–Sa 8–19 Uhr\n\nSonntags geschlossen.',nl:'Onze openingstijden:\n\n📍 Nordhorn: Ma–Do 8–18 uur, Vr–Za 8–19 uur\n📍 Gronau: Ma–Do 9–19 uur, Vr–Za 8–19 uur\n\nZondag gesloten.'},
+  prices:{de:'Unsere Preise sind täglich aktuell!\n\n🚬 Zigarettenstangen ab ca. €30–35\n🌿 Drehtabak ab ca. €10,50\n🍃 Stopftabak ab ca. €10,50\n\nBis zu €15 günstiger als in NL! 📋 Preisliste oben.',nl:'Onze prijzen zijn dagelijks actueel!\n\n🚬 Sigarettenslofs vanaf ca. €30–35\n🌿 Shagtabak vanaf ca. €10,50\n\nTot €15 goedkoper dan in NL!'},
+  location:{de:'Unsere Filialen:\n\n📍 Nordhorn: Bentheimer Str. 118b, 48529 Nordhorn\n📍 Gronau: Köningsstr. 66, 48599 Gronau\n\nBeide direkt an der NL-Grenze!',nl:'Onze vestigingen:\n\n📍 Nordhorn: Bentheimer Str. 118b\n📍 Gronau: Köningsstr. 66\n\nBeide direct aan de NL-grens!'},
+  assortment:{de:'Unser Sortiment:\n🚬 Zigaretten: Marlboro, Lucky Strike, L&M, Camel, Winston...\n🌿 Drehtabak: Lucky Strike, Drum, Marlboro...\n🍃 Stopftabak: Camel, Winston, L&M...\n\n100+ Produkte!',nl:'Ons assortiment:\n🚬 Sigaretten: alle grote merken\n🌿 Shagtabak\n🍃 Stopftabak\n\n100+ producten!'},
+  actions:{de:'🔥 Aktuelle Aktionen:\n\n• Marlboro Red Stange: €32,00 (statt €35,00)\n• Lucky Strike Drehtabak 100g: €11,80\n• L&M Blue Bundle mit Feuerzeug: €33,50\n\nAktionen wechseln wöchentlich!',nl:'🔥 Actuele acties:\n\n• Marlboro Red slof: €32,00\n• Lucky Strike shagtabak 100g: €11,80\n• L&M Blue Bundle: €33,50'},
+  order:{de:'So einfach bestellen:\n\n1️⃣ + Knopf beim Produkt klicken\n2️⃣ Warenkorb 🛒 öffnen\n3️⃣ "Per WhatsApp bestellen"\n4️⃣ Name & Telefon eingeben\n5️⃣ Abholen & vor Ort bezahlen!\n\nKeine Vorauszahlung! ✅',nl:'Zo eenvoudig bestellen:\n\n1️⃣ + knop bij product klikken\n2️⃣ Winkelwagen 🛒 openen\n3️⃣ "Bestellen via WhatsApp"\n4️⃣ Naam & telefoon invullen\n5️⃣ Ophalen & betalen!\n\nGeen vooruitbetaling! ✅'},
+};
+
+const QMAP = {hours:{de:'Öffnungszeiten',nl:'Openingstijden'},prices:{de:'Preise',nl:'Prijzen'},location:{de:'Standort',nl:'Locatie'},assortment:{de:'Sortiment',nl:'Assortiment'},actions:{de:'Aktionen',nl:'Acties'},order:{de:'Bestellen?',nl:'Bestellen?'}};
+
+function toggleChat() {
+  chatOpen = !chatOpen;
+  const box = document.getElementById('chat-box');
+  box.classList.toggle('open', chatOpen);
+  if (chatOpen && !document.getElementById('chat-msgs').children.length) {
+    addBot(lang==='de'?'Hallo! 👋 Ich bin Ihr TabakXXL-Assistent. Wie kann ich helfen?':'Hallo! 👋 Ik ben uw TabakXXL-assistent. Hoe kan ik helpen?');
+  }
+}
+
+function addBot(txt) {
+  const el = document.getElementById('chat-msgs');
+  const m = document.createElement('div');
+  m.className = 'msg bot';
+  m.textContent = txt;
+  el.appendChild(m);
+  el.scrollTop = el.scrollHeight;
+}
+
+function addUser(txt) {
+  const el = document.getElementById('chat-msgs');
+  const m = document.createElement('div');
+  m.className = 'msg user';
+  m.textContent = txt;
+  el.appendChild(m);
+  el.scrollTop = el.scrollHeight;
+}
+
+function askQ(k) {
+  if (k === 'custom') { showChatCF(); return; }
+  const q = QMAP[k];
+  if (q) addUser(lang==='nl'?q.nl:q.de);
+  setTimeout(() => {
+    const a = CHAT[k];
+    if (a) addBot(lang==='nl'?a.nl:a.de);
+  }, 300);
+}
+
+function sendChatMsg() {
+  const inp = document.getElementById('chat-inp');
+  const v = inp.value.trim();
+  if (!v) return;
+  addUser(v);
+  inp.value = '';
+  setTimeout(() => addBot(lang==='de'?'Für eine direkte Antwort nutzen Sie gerne unseren WhatsApp-Service. Klicken Sie auf "Eigene Frage"! 📱':'Gebruik onze WhatsApp-service voor een direct antwoord. Klik op "Eigen vraag"! 📱'), 350);
+}
+
+function showChatCF() {
+  document.getElementById('chat-cf').classList.add('show');
+  document.getElementById('chat-inp-row').style.display = 'none';
+  document.getElementById('chat-qs').style.display = 'none';
+  addBot(lang==='de'?'Gerne! Füllen Sie das Formular aus — wir melden uns per WhatsApp:':'Graag! Vul het formulier in — wij nemen contact op via WhatsApp:');
+}
+
+function hideChatCF() {
+  document.getElementById('chat-cf').classList.remove('show');
+  document.getElementById('chat-inp-row').style.display = 'flex';
+  document.getElementById('chat-qs').style.display = 'flex';
+}
+
+function sendChatWA() {
+  const tel = document.getElementById('ccf-tel').value.trim();
+  if (!tel) { toast('⚠️ Telefonnummer erforderlich!'); return; }
+  const name = document.getElementById('ccf-name').value.trim();
+  const q = document.getElementById('ccf-q').value.trim();
+  const msg = `📩 *Kundenanfrage TabakXXL*\n\n👤 Name: ${name||'(nicht angegeben)'}\n📞 Telefon: ${tel}\n\n❓ Frage: ${q||'(keine Frage)'}`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank');
+  hideChatCF();
+  addBot(lang==='de'?'✅ Anfrage weitergeleitet! Wir melden uns schnellstmöglich.':'✅ Aanvraag doorgestuurd! We nemen zo snel mogelijk contact op.');
+}
+
+// ===================== REVIEWS =====================
+function renderReviews() {
+  const track = document.getElementById('rev-track');
+  const double = [...REVIEWS, ...REVIEWS];
+  track.innerHTML = double.map(r => `
+    <div class="rv">
+      <div class="rv-stars">★★★★★</div>
+      <p class="rv-text de">${r.de}</p>
+      <p class="rv-text nl">${r.nl}</p>
+      <div class="rv-author">
+        <div class="rv-av">${r.n.split(' ').map(w=>w[0]).join('').slice(0,2)}</div>
+        <div><div class="rv-name">${r.n}</div><div class="rv-from">${r.f}</div></div>
+      </div>
+    </div>`).join('');
+}
+
+// ===================== NAVBAR =====================
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('solid', window.scrollY > 60);
+}, {passive:true});
+
+function toggleMob() {
+  const hb = document.getElementById('hamburger');
+  const mm = document.getElementById('mob-menu');
+  hb.classList.toggle('open');
+  mm.classList.toggle('open');
+}
+function closeMob() {
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mob-menu').classList.remove('open');
+}
+
+// ===================== SCROLL REVEAL =====================
+const rvObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+}, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv-up,.rv-left,.rv-right').forEach(el => rvObs.observe(el));
+
+// ===================== TOAST =====================
+let toastTimer;
+function toast(msg, type) {
+  const el = document.getElementById('toast');
+  const icon = document.getElementById('toast-icon');
+  const txt = document.getElementById('toast-msg');
+  icon.textContent = type==='warn' ? '⚠️' : '✅';
+  txt.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 3000);
+}
+
+// ===================== INIT =====================
+renderProducts('all');
+renderPriceTables();
+renderActions();
+renderReviews();
+checkOpenStatus();
+
+// Init lang defaults
+document.querySelectorAll('.nl').forEach(el => { el.style.display = 'none'; });
+</script>
+</body>
+</html>
