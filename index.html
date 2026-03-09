@@ -2076,7 +2076,7 @@ function sendWA() {
   const locName = loc === 'nordhorn' ? 'Nordhorn – Tabak Discount' : loc === 'gronau' ? 'Gronau – TabakXXL' : 'Unbekannt';
   const total = cart.reduce((s,c) => s + c.price*c.qty, 0);
   const lines = cart.map(c => `• ${c.qty}× ${c.name} — ${fmt(c.price*c.qty)}`).join('\n');
-  const msg = `🛒 *VORBESTELLUNG TabakXXL*\n\n📍 *Standort:* ${locName}\n👤 *Name:* ${name}\n📞 *Telefon:* ${tel}\n\n*Produkte:*\n${lines}\n\n💰 *Gesamtpreis: ${fmt(total)}*\n\n_Bezahlung bei Abholung vor Ort. Keine Vorauszahlung._`;
+  const msg = `*VORBESTELLUNG TabakXXL*\n\n*Standort:* ${locName}\n*Name:* ${name}\n*Telefon:* ${tel}\n\n*Produkte:*\n${lines}\n\n*Gesamtpreis: ${fmt(total)}*\n\n_Bezahlung bei Abholung vor Ort. Keine Vorauszahlung.`;
   window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank');
   cart = [];
   updateCartUI();
